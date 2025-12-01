@@ -1,0 +1,15 @@
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\bin\Debug\net8.0\resumeGen.exe
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\bin\Debug\net8.0\resumeGen.deps.json
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\bin\Debug\net8.0\resumeGen.runtimeconfig.json
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\bin\Debug\net8.0\resumeGen.dll
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\bin\Debug\net8.0\resumeGen.pdb
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\obj\Debug\net8.0\resumeGen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\obj\Debug\net8.0\resumeGen.AssemblyInfoInputs.cache
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\obj\Debug\net8.0\resumeGen.AssemblyInfo.cs
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\obj\Debug\net8.0\resumeGen.csproj.CoreCompileInputs.cache
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\obj\Debug\net8.0\resumeGen.sourcelink.json
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\obj\Debug\net8.0\resumeGen.dll
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\obj\Debug\net8.0\refint\resumeGen.dll
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\obj\Debug\net8.0\resumeGen.pdb
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\obj\Debug\net8.0\resumeGen.genruntimeconfig.cache
+C:\Users\aiden\OneDrive\Desktop\theFoundry\resumeGen\obj\Debug\net8.0\ref\resumeGen.dll
