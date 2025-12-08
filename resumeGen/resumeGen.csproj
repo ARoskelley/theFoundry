@@ -5,6 +5,18 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <!-- IMPORTANT: Disable automatic inclusion of .cs files -->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Items\**\*.cs" />
+    <Compile Include="Pages\**\*.cs" />
+    <Compile Include="Templates\**\*.cs" />
+    <Compile Include="FileWriter.cs" />
+    <Compile Include="Resume.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
 
 </Project>

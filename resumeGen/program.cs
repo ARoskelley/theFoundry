@@ -1,8 +1,5 @@
-﻿using ResumeSiteGenerator.Items;
-using ResumeSiteGenerator.Pages;
+﻿using System;
 using ResumeSiteGenerator.Templates;
-using System;
-
 
 namespace ResumeSiteGenerator
 {
@@ -10,69 +7,83 @@ namespace ResumeSiteGenerator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Resume Website Generator\n");
+            Console.WriteLine("=== Resume Website Generator (Test Mode) ===\n");
 
             // Load templates
             var manager = new TemplateManager();
-            manager.LoadAllTemplates("templates");
+            manager.LoadAllTemplates("TemplateFiles");
 
-            // Choose template
-            var names = manager.GetTemplateNames();
-            Console.WriteLine("Available Templates:");
-            foreach (var name in names)
-                Console.WriteLine($"- {name}");
+            var templateNames = manager.GetTemplateNames();
 
-            Console.Write("\nChoose template: ");
-            string choice = Console.ReadLine();
-
-            var template = manager.GetTemplateByName(choice);
-            if (template == null)
+            if (templateNames.Count == 0)
             {
-                Console.WriteLine("Invalid template.");
+                Console.WriteLine("No templates found! Make sure your /templates folder has subfolders like Minimal or Modern.");
                 return;
             }
 
-            // TODO: Build InputManager next to collect user data
-            // TEMPORARY: Test resume so program can run
-var resume = new Resume(
-    name: "John Doe",
-    email: "john@example.com",
-    phone: "555-1234"
-);
+            Console.WriteLine("Available Templates:");
+            foreach (var name in templateNames)
+                Console.WriteLine($" - {name}");
 
-// Add some fake content
-resume.AddSkill("C#");
-resume.AddSkill("HTML");
-resume.AddSkill("CSS");
+            Console.Write("\nChoose a template: ");
+            string choice = Console.ReadLine()?.Trim() ?? "";
 
-resume.AddExperience(new ExperienceItem(
-    "Software Developer",
-    "Example Corp",
-    "Worked on test projects",
-    "2020",
-    "2023"
-));
+            var template = manager.GetTemplateByName(choice);
 
-resume.AddProject(new ProjectItem(
-    "Portfolio Generator",
-    "A program that generates websites from templates"
-));
-var pages = template.GenerateAllPages(resume);
+            if (template == null)
+            {
+                Console.WriteLine($"Template '{choice}' not found.");
+                return;
+            }
 
-var writer = new FileWriter();
-writer.EnsureOutputDirectory("Output");
+            Console.WriteLine("\nLoading template...");
 
-foreach (var page in pages)
-{
-    writer.SaveHtml($"Output/{page.Key}.html", page.Value);
-}
+            // TEMP: Create a test resume so the generator can run
+            var resume = new Resume(
+                name: "Test User",
+                email: "test@example.com",
+                phone: "555-5555"
+            );
 
-writer.SaveCss("Output/style.css", template.CssTemplate);
+            resume.AddSkill("C#");
+            resume.AddSkill("HTML");
+            resume.AddSkill("CSS");
 
-Console.WriteLine("Website generated in /Output!");
+            resume.AddExperience(new Items.ExperienceItem(
+                "Developer",
+                "Tech Corp",
+                "Worked on cool projects.",
+                "2021",
+                "2023"
+            ));
 
+            resume.AddProject(new Items.ProjectItem(
+                "Project Generator",
+                "A program that generates static HTML websites."
+            ));
+
+            // Generate pages
+            Console.WriteLine("Generating pages...");
+
+            var pages = template.GenerateAllPages(resume);
+
+            var writer = new FileWriter();
+            writer.EnsureOutputDirectory("Output");
+
+            foreach (var page in pages)
+            {
+                string outputPath = $"Output/{page.Key}.html";
+                writer.SaveHtml(outputPath, page.Value);
+                Console.WriteLine($"Created: {outputPath}");
+            }
+
+            // Save CSS
+            string cssPath = "Output/style.css";
+            writer.SaveCss(cssPath, template.CssTemplate);
+            Console.WriteLine($"Created: {cssPath}");
+
+            Console.WriteLine("\n=== Generation Complete! ===");
+            Console.WriteLine("Open the /Output folder to view your generated website.\n");
         }
     }
-
-    
 }
