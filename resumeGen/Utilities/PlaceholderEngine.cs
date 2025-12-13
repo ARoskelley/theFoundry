@@ -60,7 +60,73 @@ namespace ResumeSiteGenerator.Utilities
             return sb.ToString();
         }
 
+        public string BuildEducationSummaryHtml(Resume resume)
+        {
+            if (resume.Education.Count == 0)
+            {
+                return "<p><em>No education listed.</em></p>";
+            }
 
+            var sb = new StringBuilder();
+
+            foreach (var edu in resume.Education)
+            {
+                sb.AppendLine("<div class=\"education-summary\">");
+                sb.AppendLine(
+                    $"<strong>{Escape(edu.Degree)}</strong> in {Escape(edu.Major)}<br>"
+                    + $"{Escape(edu.SchoolName)}"
+                );
+                sb.AppendLine("</div>");
+            }
+
+            return sb.ToString();
+        }
+
+        public string BuildEducationDetailedHtml(Resume resume)
+        {
+            if (resume.Education.Count == 0)
+            {
+                return "<p><em>No education listed.</em></p>";
+            }
+
+            var sb = new StringBuilder();
+
+            foreach (var edu in resume.Education)
+            {
+                sb.AppendLine("<div class=\"education-item\">");
+                sb.AppendLine($"<h3>{Escape(edu.Degree)} — {Escape(edu.Major)}</h3>");
+                sb.AppendLine($"<p class=\"school\">{Escape(edu.SchoolName)} ({Escape(edu.GraduationYear)})</p>");
+
+                if (!string.IsNullOrWhiteSpace(edu.Description))
+                {
+                    sb.AppendLine($"<p>{Escape(edu.Description)}</p>");
+                }
+
+                sb.AppendLine("</div>");
+            }
+
+            return sb.ToString();
+        }
+        public string BuildBioHtml(Resume resume)
+        {
+            if (string.IsNullOrWhiteSpace(resume.Bio))
+            {
+                return "";
+            }
+
+            return $"<p class=\"bio\">{Escape(resume.Bio)}</p>";
+        }
+
+        public string BuildProfileImageHtml(Resume resume)
+        {
+            if (string.IsNullOrWhiteSpace(resume.ProfileImage))
+            {
+                return "<div class=\"image-box\">No Image</div>";
+            }
+
+            return $"<img src=\"images/{Escape(resume.ProfileImage)}\" alt=\"Profile Image\" class=\"profile-image\" />";
+        }
+        
         // -----------------------------
         // Experience
         // -----------------------------

@@ -18,6 +18,9 @@ namespace ResumeSiteGenerator.Pages
 
             html = _engine.ReplaceCommonPlaceholders(html, resume);
             html = html.Replace("{{SKILLS}}", _engine.BuildSkillsHtml(resume));
+            html = html.Replace("{{EDUCATION}}", _engine.BuildEducationSummaryHtml(resume));
+            html = html.Replace("{{BIO}}", _engine.BuildBioHtml(resume));
+            html = html.Replace("{{PROFILE_IMAGE}}", _engine.BuildProfileImageHtml(resume));
 
             return html;
         }

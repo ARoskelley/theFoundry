@@ -15,21 +15,30 @@
         <a href="portfolio.html">Portfolio</a>
     </nav>
 
-    <section class="profile">
-        <h1>{{NAME}}</h1>
-        <p class="contact">
-            {{EMAIL}} | {{PHONE}}
-        </p>
+    <section class="profile-hero">
 
-        <h2>Skills</h2>
-        <ul>
-            {{SKILLS}}
-        </ul>
+        <div class="profile-image">
+            {{PROFILE_IMAGE}}
+        </div>
 
-        <h2>Education</h2>
-        {{EDUCATION}}
+        <div class="profile-content">
+            <h1>{{NAME}}</h1>
+            <p class="contact">{{EMAIL}} | {{PHONE}}</p>
+
+            {{BIO}}
+
+            <h3>Core Skills</h3>
+            <ul class="skills-list">
+                {{SKILLS}}
+            </ul>
+
+            <h2>Education</h2>
+            {{EDUCATION}}
+
+        </div>
 
     </section>
+
 
 </body>
 

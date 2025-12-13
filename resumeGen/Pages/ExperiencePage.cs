@@ -17,7 +17,10 @@ namespace ResumeSiteGenerator.Pages
             string html = TemplateContent ?? "";
 
             html = _engine.ReplaceCommonPlaceholders(html, resume);
+
             html = html.Replace("{{EXPERIENCE}}", _engine.BuildExperienceHtml(resume));
+            html = html.Replace("{{EDUCATION}}", _engine.BuildEducationDetailedHtml(resume));
+
 
             return html;
         }

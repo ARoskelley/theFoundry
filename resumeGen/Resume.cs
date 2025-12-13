@@ -22,18 +22,56 @@ namespace ResumeSiteGenerator
         public IReadOnlyList<ExperienceItem> Experiences => _experiences;
         public IReadOnlyList<EducationItem> Education => _educationItems;
         public IReadOnlyList<ProjectItem> Projects => _projectItems;
+        public string Bio { get; private set; } = "";
+        public string ProfileImage { get; private set; } = "";
+        public void ClearExperience() => _experiences.Clear();
+        public void ClearEducation() => _educationItems.Clear();
+        public void ClearProjects() => _projectItems.Clear();
 
-        public Resume(string name, string email, string phone)
+        public Resume()
         {
-            _name = name;
-            _email = email;
-            _phone = phone;
+            _name = "";
+            _email = "";
+            _phone = "";
 
             _skills = new List<string>();
             _experiences = new List<ExperienceItem>();
             _educationItems = new List<EducationItem>();
             _projectItems = new List<ProjectItem>();
         }
+
+        public Resume(string name, string email, string phone) : this()
+        {
+            _name = name;
+            _email = email;
+            _phone = phone;
+        }
+
+
+
+        public void SetBio(string bio)
+        {
+            Bio = bio ?? "";
+        }
+        public void SetProfileImage(string imageFileName)
+        {
+            ProfileImage = imageFileName?.Trim() ?? "";
+        }
+        public void SetName(string name)
+        {
+            _name = name ?? "";
+        }
+
+        public void SetEmail(string email)
+        {
+            _email = email ?? "";
+        }
+
+        public void SetPhone(string phone)
+        {
+            _phone = phone ?? "";
+        }
+
 
         public void AddSkill(string skill) => _skills.Add(skill);
         public void AddExperience(ExperienceItem exp) => _experiences.Add(exp);

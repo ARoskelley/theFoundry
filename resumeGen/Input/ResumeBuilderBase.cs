@@ -4,7 +4,7 @@ namespace ResumeSiteGenerator.Input
 {
     public abstract class ResumeBuilderBase : IResumeBuilder
     {
-        public abstract Resume BuildResume();
+        public abstract Resume Build();
 
         protected bool Confirm(string prompt)
         {

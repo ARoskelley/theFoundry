@@ -4,7 +4,7 @@ namespace ResumeSiteGenerator.Input
 {
     public class QuickResumeBuilder : ResumeBuilderBase
     {
-        public override Resume BuildResume()
+        public override Resume Build()
         {
             Console.WriteLine("\n--- Quick Resume Build ---");
 
@@ -13,6 +13,10 @@ namespace ResumeSiteGenerator.Input
                 Prompt("Email: "),
                 Prompt("Phone: ")
             );
+            
+            Console.Write("Profile image file name (leave blank to skip): ");
+            string image = Console.ReadLine() ?? "";
+            resume.SetProfileImage(image);
 
             // Skills
             Console.Write("Skills (comma-separated): ");
@@ -28,7 +32,8 @@ namespace ResumeSiteGenerator.Input
                 resume.AddEducation(new EducationItem(
                     Prompt("School: "),
                     Prompt("Degree: "),
-                    Prompt("Graduation Year: ")
+                    Prompt("Graduation Year: "),
+                    Prompt("Description:")
                 ));
             }
 
@@ -42,6 +47,13 @@ namespace ResumeSiteGenerator.Input
                     Prompt("Start Date: "),
                     Prompt("End Date: ")
                 ));
+            }
+
+            // Bio (maybe)
+            Console.Write("Add a short bio? (y/n): ");
+            if (Confirm(""))
+            {
+                resume.SetBio(Prompt("Bio: "));
             }
 
             // Project (single entry)

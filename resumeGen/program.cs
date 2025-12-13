@@ -75,7 +75,7 @@ namespace ResumeSiteGenerator
                 _   => new QuickResumeBuilder()
             };
 
-            var resume = builder.BuildResume();
+            var resume = builder.Build();
 
             // --------------------------------------------------
             // Generate pages

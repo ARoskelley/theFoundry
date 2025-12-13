@@ -1,2 +1,34 @@
-<h1>Portfolio</h1>
-<p>Portfolio test page.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{NAME}} | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<nav class="top-nav" aria-label="Primary navigation">
+    <span class="logo">{{NAME}}</span>
+    <div class="nav-links">
+        <a href="index.html">Profile</a>
+        <a href="experience.html">Experience</a>
+        <a href="portfolio.html">Portfolio</a>
+    </div>
+</nav>
+
+<main id="main-content">
+
+    <section class="portfolio">
+        <h1>Projects</h1>
+        <div class="portfolio-grid">
+            {{PROJECTS}}
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>

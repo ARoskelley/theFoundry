@@ -1,20 +1,27 @@
 namespace ResumeSiteGenerator.Items
 {
     public class EducationItem
+{
+    public string SchoolName { get; }
+    public string Degree { get; }
+    public string Major { get; }
+    public string GraduationYear { get; }
+    public string Description { get; }
+
+    public EducationItem(
+        string schoolName,
+        string degree,
+        string major,
+        string graduationYear,
+        string description = ""
+    )
     {
-        private string _schoolName;
-        private string _degree;
-        private string _graduationYear;
-
-        public string SchoolName => _schoolName;
-        public string Degree => _degree;
-        public string GraduationYear => _graduationYear;
-
-        public EducationItem(string schoolName, string degree, string graduationYear)
-        {
-            _schoolName = schoolName;
-            _degree = degree;
-            _graduationYear = graduationYear;
-        }
+        SchoolName = schoolName;
+        Degree = degree;
+        Major = major;
+        GraduationYear = graduationYear;
+        Description = description;
     }
+}
+
 }
