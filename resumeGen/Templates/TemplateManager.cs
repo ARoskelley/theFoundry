@@ -16,7 +16,7 @@ namespace ResumeSiteGenerator.Templates
         {
             foreach (var dir in Directory.GetDirectories(templatesFolderPath))
             {
-                string name = Path.GetFileName(dir);
+                string name = Path.GetFileName(dir).ToLower();
 
                 TemplateBase template = name.ToLower() switch
                 {
@@ -33,11 +33,19 @@ namespace ResumeSiteGenerator.Templates
             }
         }
 
-        public List<string> GetTemplateNames() => new List<string>(_templates.Keys);
+        public List<string> GetTemplateNames()
+        {
+            return _templates.Keys
+                .Select(k => char.ToUpper(k[0]) + k.Substring(1))
+                .ToList();
+        }
+
 
         public TemplateBase GetTemplateByName(string name)
         {
+            name = name.ToLower();
             return _templates.ContainsKey(name) ? _templates[name] : null;
         }
+
     }
 }

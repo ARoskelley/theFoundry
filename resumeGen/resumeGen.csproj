@@ -14,6 +14,7 @@
     <Compile Include="Items\**\*.cs" />
     <Compile Include="Pages\**\*.cs" />
     <Compile Include="Templates\**\*.cs" />
+    <Compile Include="Utilities\**\*.cs" />
     <Compile Include="FileWriter.cs" />
     <Compile Include="Resume.cs" />
     <Compile Include="Program.cs" />
