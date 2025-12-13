@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using ResumeSiteGenerator.Templates;
-using ResumeSiteGenerator.Items;
+using ResumeSiteGenerator.Input;
 
 namespace ResumeSiteGenerator
 {
@@ -9,113 +9,97 @@ namespace ResumeSiteGenerator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("=== Resume Website Generator (Test Mode) ===\n");
+            Console.WriteLine("=== Resume Website Generator ===\n");
 
             // --------------------------------------------------
-            // Resolve project root (from bin/Debug/net8.0)
+            // Resolve project root (bin/Debug/net8.0 -> project root)
             // --------------------------------------------------
             string projectRoot = Path.GetFullPath(
                 Path.Combine(AppContext.BaseDirectory, @"..\..\..")
             );
 
             string templateRoot = Path.Combine(projectRoot, "TemplateFiles");
+            string outputRoot = Path.Combine(projectRoot, "Output");
 
-            Console.WriteLine($"Resolved project root: {projectRoot}");
-            Console.WriteLine($"Looking for templates in: {templateRoot}\n");
+            Console.WriteLine($"Project root: {projectRoot}");
+            Console.WriteLine($"Template folder: {templateRoot}\n");
 
             if (!Directory.Exists(templateRoot))
             {
                 Console.WriteLine("ERROR: TemplateFiles directory not found.");
-                Console.WriteLine("Make sure it exists at the project root.");
+                Console.WriteLine("Ensure it exists at the project root.");
                 return;
             }
 
             // --------------------------------------------------
             // Load templates
             // --------------------------------------------------
-            var manager = new TemplateManager();
-            manager.LoadAllTemplates(templateRoot);
+            var templateManager = new TemplateManager();
+            templateManager.LoadAllTemplates(templateRoot);
 
-            var templateNames = manager.GetTemplateNames();
+            var templateNames = templateManager.GetTemplateNames();
 
             if (templateNames.Count == 0)
             {
-                Console.WriteLine("ERROR: No templates found inside TemplateFiles.");
-                Console.WriteLine("Ensure subfolders like 'Minimal' or 'Modern' exist.");
+                Console.WriteLine("ERROR: No templates found in TemplateFiles.");
                 return;
             }
 
             Console.WriteLine("Available Templates:");
             foreach (var name in templateNames)
+            {
                 Console.WriteLine($" - {name}");
+            }
 
             Console.Write("\nChoose a template: ");
-            string choice = Console.ReadLine()?.Trim().ToLower() ?? "";
+            string templateChoice = Console.ReadLine()?.Trim().ToLower() ?? "";
 
-            var template = manager.GetTemplateByName(choice);
-
+            var template = templateManager.GetTemplateByName(templateChoice);
             if (template == null)
             {
-                Console.WriteLine($"ERROR: Template '{choice}' not found.");
+                Console.WriteLine($"ERROR: Template '{templateChoice}' not found.");
                 return;
             }
 
             // --------------------------------------------------
-            // Create a TEST resume (temporary)
+            // Choose resume build mode
             // --------------------------------------------------
-            var resume = new Resume(
-                name: "Test User",
-                email: "test@example.com",
-                phone: "555-5555"
-            );
+            Console.WriteLine("\nChoose resume build mode:");
+            Console.WriteLine("1 - Quick Build (minimal prompts)");
+            Console.WriteLine("2 - Full Build (guided & detailed)");
+            Console.Write("Selection: ");
 
-            resume.AddSkill("C#");
-            resume.AddSkill("HTML");
-            resume.AddSkill("CSS");
+            IResumeBuilder builder = Console.ReadLine() switch
+            {
+                "2" => new FullResumeBuilder(),
+                _   => new QuickResumeBuilder()
+            };
 
-            resume.AddExperience(new ExperienceItem(
-                "Software Developer",
-                "Tech Corp",
-                "Worked on internal tools and web applications.",
-                "2021",
-                "2023"
-            ));
-
-            var project = new ProjectItem(
-                "Resume Generator",
-                "A static site generator written in C#."
-            );
-            project.AddTechnology("C#");
-            project.AddTechnology(".NET");
-            project.AddTechnology("HTML/CSS");
-
-            resume.AddProject(project);
+            var resume = builder.BuildResume();
 
             // --------------------------------------------------
             // Generate pages
             // --------------------------------------------------
-            Console.WriteLine("\nGenerating pages...");
+            Console.WriteLine("\nGenerating website...");
 
             var pages = template.GenerateAllPages(resume);
 
-            string outputDir = Path.Combine(projectRoot, "Output");
-
             var writer = new FileWriter();
-            writer.EnsureOutputDirectory(outputDir);
+            writer.EnsureOutputDirectory(outputRoot);
 
             foreach (var page in pages)
             {
-                string outputPath = Path.Combine(outputDir, $"{page.Key}.html");
+                string outputPath = Path.Combine(outputRoot, $"{page.Key}.html");
                 writer.SaveHtml(outputPath, page.Value);
                 Console.WriteLine($"Created: {outputPath}");
             }
 
             // Save CSS
-            string cssPath = Path.Combine(outputDir, "style.css");
+            string cssPath = Path.Combine(outputRoot, "style.css");
             writer.SaveCss(cssPath, template.CssTemplate ?? "");
             Console.WriteLine($"Created: {cssPath}");
 
-            Console.WriteLine("\n=== Generation Complete ===");
+            Console.WriteLine("\n=== Website Generation Complete ===");
             Console.WriteLine("Open the Output folder to view your site.\n");
         }
     }
