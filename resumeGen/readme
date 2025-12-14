@@ -1,0 +1,45 @@
+Hello Mortal. 
+
+If you're my professor (or a TA), I hope you enjoy and you are welcome here. 
+Anyone else who has stumbled across this code, leave while you still can.
+
+This is my ResumeGen project, the first functional project of theFoundry. 
+It generates resume websites based on user input and puts them in an output folder that you can move into another repo, hosting service, etc.
+It works quite well, and will only continue to improve.
+
+You can see the file structure of the output in the example file, and that is my real contact info if you have any questions. Texts work best, calls are next, and emails I can only say good luck
+
+------------------------------------------------------------Instructions-----------------------------------------------------------------
+
+Dotnet run
+
+Follow instructions
+
+Website is done
+
+---------------------------------------------------------Image Instructions--------------------------------------------------------------
+
+In the output file, make a new file named "images" 
+No quotes
+Don't be an idiot
+
+Put image in there
+Must be the exact same name as what you passed to the program
+Don't be an idiot
+
+------------------------------------------------------------Conclusion-------------------------------------------------------------------
+
+This program works, if something stupid happens, it is on you. And if you change it (and it breaks) I will be quite miffed
+It ended up far more complex than I expected, but between my brain, AI for ideas and debugging, and the futile cries of my roommates to just finish the program I ended up with this. 
+
+Best of luck and if you hate it, womp womp.
+
+-------------------------------------------------------------For Emma--------------------------------------------------------------------
+
+You are probably the only other person who I hand this off to, so feel free to try it out as much as you like. 
+I'll teach you the inner workings and how to make the Templates and TemplateFiles, just give me some time. 
+Stay patient and take things at your pace.
+
+Any notes you decide to take, you can feel free to put them here.
+
+Best of luck
