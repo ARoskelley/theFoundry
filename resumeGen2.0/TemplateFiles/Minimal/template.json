@@ -1,0 +1,33 @@
+{
+  "name": "Minimal",
+  "description": "A simple, clean template with minimal styling - perfect for a classic look",
+  "author": "Aiden Roskelley",
+  "version": "2.0",
+  "cssFile": "style.css",
+  "pages": [
+    {
+      "fileName": "page_profile.html",
+      "outputName": "index",
+      "title": "Profile"
+    },
+    {
+      "fileName": "page_experience.html",
+      "outputName": "experience",
+      "title": "Experience"
+    },
+    {
+      "fileName": "page_portfolio.html",
+      "outputName": "portfolio",
+      "title": "Portfolio"
+    }
+  ],
+  "colors": {
+    "primary": "#333333",
+    "primarySoft": "#f0f0f0",
+    "background": "#f9f9f9",
+    "card": "#ffffff",
+    "text": "#333333",
+    "muted": "#666666"
+  },
+  "staticFiles": []
+}

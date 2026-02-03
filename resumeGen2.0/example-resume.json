@@ -1,0 +1,126 @@
+{
+  "name": "Aiden Roskelley",
+  "email": "ARoskelley2112@gmail.com",
+  "phone": "702-409-6005",
+  "bio": "Software developer and problem solver with a passion for building tools that make life easier. I combine my technical background in mechanical technologies with modern programming skills to create practical, user-focused applications.",
+  "profileImage": "profile.jpg",
+  "location": "Rexburg, Idaho",
+  "jobTitle": "Software Developer",
+  "skills": [
+    { "name": "C#", "category": "Languages", "proficiencyPercent": 85 },
+    { "name": "Python", "category": "Languages", "proficiencyPercent": 75 },
+    { "name": "JavaScript", "category": "Languages", "proficiencyPercent": 70 },
+    { "name": "HTML/CSS", "category": "Languages", "proficiencyPercent": 80 },
+    { "name": ".NET Core", "category": "Frameworks", "proficiencyPercent": 80 },
+    { "name": "Git", "category": "Tools", "proficiencyPercent": 75 },
+    { "name": "SQL", "category": "Databases", "proficiencyPercent": 65 },
+    { "name": "Problem Solving", "category": "Soft Skills", "proficiencyPercent": 90 },
+    { "name": "Team Collaboration", "category": "Soft Skills", "proficiencyPercent": 85 },
+    { "name": "Welding & Fabrication", "category": "Technical", "proficiencyPercent": 90 }
+  ],
+  "experiences": [
+    {
+      "jobTitle": "Forklift Operator",
+      "company": "Temperpack",
+      "description": "Managed warehouse logistics and inventory organization for a sustainable packaging company.",
+      "startDate": "March 2025",
+      "endDate": "September 2025",
+      "highlights": [
+        "Operated forklifts safely with zero incidents",
+        "Loaded and unloaded 20+ trucks daily",
+        "Implemented improved inventory organization system",
+        "Trained 3 new team members on equipment operation"
+      ]
+    },
+    {
+      "jobTitle": "Welder / Fabricator",
+      "company": "Viking Metalworks",
+      "description": "Performed MIG and TIG welding for custom fencing and metal fabrication projects.",
+      "startDate": "May 2024",
+      "endDate": "August 2024",
+      "highlights": [
+        "Fabricated custom residential and commercial fencing",
+        "Read and interpreted technical blueprints",
+        "Maintained welding equipment and ensured safety compliance",
+        "Completed projects ahead of schedule with minimal rework"
+      ]
+    },
+    {
+      "jobTitle": "Freelance Developer",
+      "company": "Self-Employed",
+      "description": "Building personal projects and automation tools while completing my degree.",
+      "startDate": "January 2023",
+      "endDate": "Present",
+      "highlights": [
+        "Developed TheFoundry - a suite of content generators",
+        "Created resume website generator used by classmates",
+        "Built automation scripts to streamline repetitive tasks"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "schoolName": "Brigham Young University - Idaho",
+      "degree": "Bachelor of Science",
+      "major": "Computer Science",
+      "graduationYear": "2026",
+      "description": "Focused on software engineering, algorithms, and practical application development. Active participant in coding clubs and hackathons. Maintaining a strong GPA while working part-time."
+    },
+    {
+      "schoolName": "East Career and Technical Academy",
+      "degree": "High School Diploma",
+      "major": "Mechanical Technologies",
+      "graduationYear": "2022",
+      "description": "Technical high school in Las Vegas specializing in hands-on mechanical and technical education. Gained practical skills in welding, fabrication, and mechanical systems that complement my software development work."
+    }
+  ],
+  "projects": [
+    {
+      "title": "TheFoundry",
+      "description": "A growing collection of content generators and task automation programs. TheFoundry is my personal toolkit for automating repetitive tasks and generating content quickly. It includes this very resume generator!",
+      "technologies": ["C#", ".NET 8", "HTML", "CSS", "JSON"],
+      "url": "https://github.com/ARoskelley/theFoundry",
+      "imageFile": null
+    },
+    {
+      "title": "ResumeGen",
+      "description": "A command-line tool that generates beautiful, responsive resume websites from user input or JSON data. Supports multiple templates, custom themes, and produces clean HTML/CSS output ready for deployment.",
+      "technologies": ["C#", ".NET 8", "HTML5", "CSS3", "Responsive Design"],
+      "url": "https://github.com/ARoskelley/theFoundry/tree/main/resumeGen",
+      "imageFile": null
+    },
+    {
+      "title": "DARCI",
+      "description": "An ambitious personal project currently in development. Details are classified, but it involves AI integration and natural language processing. Stay tuned for updates!",
+      "technologies": ["Python", "Machine Learning", "API Integration"],
+      "url": null,
+      "imageFile": null
+    },
+    {
+      "title": "Inventory Tracker",
+      "description": "A simple but effective inventory management system I built to help track parts and materials. Features barcode scanning support and generates reports for reordering.",
+      "technologies": ["Python", "SQLite", "Tkinter"],
+      "url": null,
+      "imageFile": null
+    }
+  ],
+  "socialLinks": [
+    {
+      "platform": "github",
+      "url": "https://github.com/ARoskelley",
+      "displayText": "GitHub"
+    },
+    {
+      "platform": "linkedin",
+      "url": "https://linkedin.com/in/aiden-roskelley",
+      "displayText": "LinkedIn"
+    },
+    {
+      "platform": "email",
+      "url": "mailto:ARoskelley2112@gmail.com",
+      "displayText": "Email Me"
+    }
+  ],
+  "lastModified": "2026-02-02T12:00:00",
+  "preferredTemplate": "modern"
+}

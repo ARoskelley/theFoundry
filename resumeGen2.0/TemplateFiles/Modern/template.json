@@ -1,0 +1,38 @@
+{
+  "name": "Modern",
+  "description": "A clean, professional template with a blue accent color and card-based layout",
+  "author": "Aiden Roskelley",
+  "version": "2.0",
+  "cssFile": "style.css",
+  "pages": [
+    {
+      "fileName": "page_profile.html",
+      "outputName": "index",
+      "title": "Profile"
+    },
+    {
+      "fileName": "page_experience.html",
+      "outputName": "experience",
+      "title": "Experience"
+    },
+    {
+      "fileName": "page_portfolio.html",
+      "outputName": "portfolio",
+      "title": "Portfolio"
+    },
+    {
+      "fileName": "page_contact.html",
+      "outputName": "contact",
+      "title": "Contact"
+    }
+  ],
+  "colors": {
+    "primary": "#2563eb",
+    "primarySoft": "#dbeafe",
+    "background": "#f5f7fb",
+    "card": "#ffffff",
+    "text": "#1f2937",
+    "muted": "#6b7280"
+  },
+  "staticFiles": []
+}
