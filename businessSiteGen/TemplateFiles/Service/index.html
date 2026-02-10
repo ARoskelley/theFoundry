@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{LANG}}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{SEO_META}}
+    {{THEME_VARS}}
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="template-service{{ANIMATIONS_CLASS}}">
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark">{{LOGO_MARK}}</span>
+        <div>
+          <div class="brand-name">{{SITE_NAME}}</div>
+          <div class="brand-tagline">{{TAGLINE}}</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#pricing">Pricing</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero-panel">
+        {{HERO_SECTION}}
+      </div>
+
+      {{ABOUT_SECTION}}
+      {{SERVICES_SECTION}}
+      {{SERVICE_PRICING}}
+      {{SERVICE_FAQS}}
+      {{SERVICE_COVERAGE}}
+      {{TESTIMONIALS_SECTION}}
+      {{CTA_SECTION}}
+      {{CONTACT_SECTION}}
+      {{LOCATIONS_SECTION}}
+    </main>
+
+    <footer class="site-footer">
+      {{SOCIAL_SECTION}}
+      <p>&copy; {{YEAR}} {{SITE_NAME}}. All rights reserved.</p>
+    </footer>
+
+    {{ANIMATIONS_SCRIPT}}
+    <script src="theme.js" defer></script>
+  </body>
+</html>

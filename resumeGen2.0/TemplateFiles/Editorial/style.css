@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 10px;
+    background: white;
+    padding: 8px 12px;
+    z-index: 100;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 30px 60px 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(6px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.brand-name {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.brand-role {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.site-nav a {
+    margin-left: 20px;
+    color: var(--text);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.site-nav a.active {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.page {
+    padding: 50px 60px 80px;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: start;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.intro-image .profile-image,
+.intro-image .image-box {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 6px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    background: #eee3db;
+}
+
+.intro-text h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.4rem;
+    margin: 0 0 10px;
+}
+
+.contact {
+    margin: 0 0 6px;
+    color: var(--muted);
+}
+
+.location {
+    margin: 0 0 16px;
+    color: var(--muted);
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.social-link {
+    padding: 8px 16px;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    font-size: 0.9rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.panel {
+    background: var(--card);
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.panel h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-top: 0;
+}
+
+.skill-category {
+    margin-bottom: 18px;
+}
+
+.skill-category h4 {
+    margin: 0 0 8px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    margin-bottom: 6px;
+}
+
+.education-summary {
+    margin-bottom: 16px;
+}
+
+.education-item {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    border-left: 4px solid var(--accent);
+}
+
+.experience-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.experience-item {
+    padding: 24px;
+    border-radius: 10px;
+    background: var(--card);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    margin-top: 0;
+    font-family: "Playfair Display", serif;
+}
+
+.dates {
+    color: var(--muted);
+    font-style: italic;
+}
+
+.highlights {
+    padding-left: 18px;
+}
+
+.page-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.1rem;
+    margin-bottom: 8px;
+}
+
+.lead {
+    margin-top: 0;
+    color: var(--muted);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.project-item {
+    background: var(--card);
+    padding: 22px;
+    border-radius: 10px;
+    border-top: 3px solid var(--accent);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.project-item h3 {
+    margin-top: 0;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.contact-card {
+    background: var(--card);
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+.contact-card h2 {
+    font-family: "Playfair Display", serif;
+    margin-top: 0;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.contact-label {
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tag {
+    padding: 4px 12px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 999px;
+    font-size: 0.8rem;
+}
+
+.site-footer {
+    padding: 24px 60px 40px;
+    color: var(--muted);
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+@media (max-width: 900px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 20px 24px;
+    }
+
+    .page {
+        padding: 30px 24px 60px;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+    }
+
+    .content-grid,
+    .experience-layout,
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .site-nav a {
+        margin-left: 0;
+        margin-right: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+}

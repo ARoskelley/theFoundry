@@ -1,0 +1,121 @@
+body {
+  background: linear-gradient(180deg, #f6f7fb 0%, #ffffff 100%);
+}
+
+.site-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 2.5rem 7vw 1rem;
+}
+
+.site-header.is-scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brand-tagline {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem 7vw 5rem;
+}
+
+.hero-shell {
+  padding: 2rem;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  margin: 0 0 1rem;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.listings .card.listing img {
+  border-radius: 14px;
+  margin-bottom: 1rem;
+}
+
+.listings .price {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.agents .card.agent {
+  text-align: center;
+}
+
+.agents img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.neighborhoods .card {
+  border-left: 4px solid var(--accent);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 7vw 3rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 720px) {
+  .nav {
+    display: none;
+  }
+}

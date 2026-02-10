@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "siteName": "Northline Realty",
+    "tagline": "Homes, neighborhoods, and honest guidance.",
+    "domain": "northlinerealty.com",
+    "language": "en",
+    "title": "Northline Realty | Buy, Sell, Invest",
+    "description": "Local agents with deep neighborhood knowledge and data-driven strategy.",
+    "canonicalUrl": "https://northlinerealty.com",
+    "ogImage": "assets/images/hero.svg",
+    "favicon": ""
+  },
+  "brand": {
+    "logo": "",
+    "colors": {
+      "primary": "#0B1320",
+      "secondary": "#1C2541",
+      "accent": "#5BC0BE",
+      "background": "#F6F7FB",
+      "text": "#111827"
+    },
+    "fonts": {
+      "heading": "Cormorant Garamond",
+      "body": "Inter"
+    }
+  },
+  "hero": {
+    "headline": "Find the right home in the right neighborhood.",
+    "subheadline": "Smart search tools and local expertise for buyers and sellers.",
+    "ctaText": "Browse Listings",
+    "ctaLink": "#listings",
+    "image": "assets/images/hero.svg"
+  },
+  "about": {
+    "title": "Neighborhood experts",
+    "body": "Our agents live here and know the market block by block. We combine data, design, and negotiation to get you the best outcome.",
+    "image": "assets/images/about.svg"
+  },
+  "services": [
+    { "title": "Buy", "description": "Guided showings and competitive strategies.", "icon": "assets/icons/key.svg" },
+    { "title": "Sell", "description": "Staging, pricing, and marketing that perform.", "icon": "assets/icons/sign.svg" },
+    { "title": "Invest", "description": "Rental analysis and long-term planning.", "icon": "assets/icons/chart.svg" }
+  ],
+  "testimonials": [
+    { "name": "Luis R.", "quote": "They found us a home in 10 days and negotiated below ask.", "role": "Buyer", "image": "assets/images/testimonial-1.svg" }
+  ],
+  "cta": {
+    "title": "Talk to a local agent",
+    "body": "Schedule a 15-minute call today.",
+    "buttonText": "Contact Us",
+    "buttonLink": "#agents"
+  },
+  "contact": {
+    "phone": "(555) 990-7721",
+    "email": "hello@northlinerealty.com",
+    "address": "505 Market St, Seattle, WA",
+    "hours": "Mon-Sat 9am-7pm",
+    "mapEmbed": "<iframe src=\"https://maps.google.com/...\" loading=\"lazy\"></iframe>"
+  },
+  "locations": [
+    { "label": "Downtown Office", "address": "505 Market St, Seattle, WA", "phone": "(555) 990-7721" }
+  ],
+  "social": [
+    { "label": "LinkedIn", "url": "https://linkedin.com/company/northlinerealty" },
+    { "label": "Instagram", "url": "https://instagram.com/northlinerealty" }
+  ],
+  "realEstate": {
+    "featuredListings": [
+      {
+        "title": "Modern Craftsman",
+        "price": "$845,000",
+        "address": "2149 N 8th Ave",
+        "beds": "4",
+        "baths": "3",
+        "sqft": "2,420",
+        "image": "assets/images/listing-1.svg"
+      },
+      {
+        "title": "Waterfront Condo",
+        "price": "$620,000",
+        "address": "99 Pier View, Unit 12",
+        "beds": "2",
+        "baths": "2",
+        "sqft": "1,180",
+        "image": "assets/images/listing-2.svg"
+      }
+    ],
+    "agents": [
+      {
+        "name": "Avery Kim",
+        "role": "Principal Broker",
+        "phone": "(555) 990-7730",
+        "email": "avery@northlinerealty.com",
+        "image": "assets/images/agent-1.svg"
+      }
+    ],
+    "neighborhoods": [
+      { "name": "Greenlake", "summary": "Walkable, parks, and classic craftsman homes." },
+      { "name": "Ballard", "summary": "Waterfront dining, new builds, and local shops." }
+    ]
+  }
+}

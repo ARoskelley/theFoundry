@@ -1,0 +1,12 @@
+{
+  "name": "Contractor",
+  "description": "Bold industrial layout with case-study focus and process steps.",
+  "author": "Foundry",
+  "version": "1.0",
+  "pages": [
+    { "fileName": "index.html", "outputName": "index" }
+  ],
+  "cssFiles": ["base.css", "styles.css"],
+  "jsFiles": ["animations.js", "theme.js"],
+  "staticDirectories": ["assets"]
+}

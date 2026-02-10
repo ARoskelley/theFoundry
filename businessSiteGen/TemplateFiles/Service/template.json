@@ -1,0 +1,12 @@
+{
+  "name": "Service Business",
+  "description": "Clean conversion-focused layout with pricing and FAQ.",
+  "author": "Foundry",
+  "version": "1.0",
+  "pages": [
+    { "fileName": "index.html", "outputName": "index" }
+  ],
+  "cssFiles": ["base.css", "styles.css"],
+  "jsFiles": ["animations.js", "theme.js"],
+  "staticDirectories": ["assets"]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Citrus",
+  "description": "A warm, vibrant template with soft gradients and rounded cards",
+  "author": "Aiden Roskelley",
+  "version": "2.0",
+  "cssFile": "style.css",
+  "pages": [
+    {
+      "fileName": "page_profile.html",
+      "outputName": "index",
+      "title": "Profile"
+    },
+    {
+      "fileName": "page_experience.html",
+      "outputName": "experience",
+      "title": "Experience"
+    },
+    {
+      "fileName": "page_portfolio.html",
+      "outputName": "portfolio",
+      "title": "Portfolio"
+    },
+    {
+      "fileName": "page_contact.html",
+      "outputName": "contact",
+      "title": "Contact"
+    }
+  ],
+  "colors": {
+    "primary": "#f97316",
+    "primarySoft": "#fff1e6",
+    "background": "#fff7ef",
+    "card": "#ffffff",
+    "text": "#2c1f1a",
+    "muted": "#8a6b5e"
+  },
+  "staticFiles": []
+}

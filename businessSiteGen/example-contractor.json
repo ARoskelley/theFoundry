@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "siteName": "Iron Ridge Construction",
+    "tagline": "Built to last. Designed for life.",
+    "domain": "ironridgebuild.com",
+    "language": "en",
+    "title": "Iron Ridge Construction | Residential & Commercial",
+    "description": "Remodels, additions, and custom builds with transparent timelines and craftsmanship.",
+    "canonicalUrl": "https://ironridgebuild.com",
+    "ogImage": "assets/images/hero.svg",
+    "favicon": ""
+  },
+  "brand": {
+    "logo": "",
+    "colors": {
+      "primary": "#2B2D42",
+      "secondary": "#8D99AE",
+      "accent": "#EF233C",
+      "background": "#0F1117",
+      "text": "#F8FAFC"
+    },
+    "fonts": {
+      "heading": "Oswald",
+      "body": "Source Sans 3"
+    }
+  },
+  "hero": {
+    "headline": "Craftsmanship you can see. Process you can trust.",
+    "subheadline": "From kitchens to full custom builds, we deliver on time with clear communication.",
+    "ctaText": "Get a Quote",
+    "ctaLink": "#contact",
+    "image": "assets/images/hero.svg"
+  },
+  "about": {
+    "title": "We build with clarity",
+    "body": "Our team brings 20+ years of experience in remodels and new construction. We focus on transparency, quality, and clean job sites.",
+    "image": "assets/images/about.svg"
+  },
+  "services": [
+    { "title": "Remodels", "description": "Kitchen, bath, and whole-home remodels.", "icon": "assets/icons/hammer.svg" },
+    { "title": "Additions", "description": "Expand your footprint with seamless additions.", "icon": "assets/icons/home.svg" },
+    { "title": "Custom Builds", "description": "Full-service design and build management.", "icon": "assets/icons/blueprint.svg" }
+  ],
+  "testimonials": [
+    { "name": "Kara D.", "quote": "They kept every promise and the finish work is flawless.", "role": "Homeowner", "image": "assets/images/testimonial-1.svg" }
+  ],
+  "cta": {
+    "title": "Tell us about your project",
+    "body": "We will respond within 1 business day.",
+    "buttonText": "Request a Quote",
+    "buttonLink": "#contact"
+  },
+  "contact": {
+    "phone": "(555) 445-1182",
+    "email": "projects@ironridgebuild.com",
+    "address": "8100 Steelworks Rd, Denver, CO",
+    "hours": "Mon-Fri 8am-6pm",
+    "mapEmbed": "<iframe src=\"https://maps.google.com/...\" loading=\"lazy\"></iframe>"
+  },
+  "locations": [
+    {
+      "label": "Main Office",
+      "address": "8100 Steelworks Rd, Denver, CO",
+      "phone": "(555) 445-1182"
+    }
+  ],
+  "social": [
+    { "label": "Houzz", "url": "https://houzz.com/ironridge" },
+    { "label": "Instagram", "url": "https://instagram.com/ironridgebuild" }
+  ],
+  "contractor": {
+    "beforeAfter": [
+      {
+        "beforeImage": "assets/images/before-1.svg",
+        "afterImage": "assets/images/after-1.svg",
+        "caption": "Kitchen remodel in Capitol Hill"
+      }
+    ],
+    "process": [
+      { "step": "Consultation", "detail": "On-site walkthrough and budget alignment." },
+      { "step": "Design + Estimate", "detail": "Detailed scope, schedule, and pricing." },
+      { "step": "Build", "detail": "Dedicated PM and weekly updates." }
+    ],
+    "certifications": [
+      { "name": "Licensed General Contractor", "issuer": "State of CO", "year": "2021" },
+      { "name": "EPA Lead-Safe Certified", "issuer": "EPA", "year": "2022" }
+    ]
+  }
+}

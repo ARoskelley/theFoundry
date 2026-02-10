@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{NAME}} | Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{NAME}} - {{JOB_TITLE}}. {{BIO_TEXT}}">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+    <div class="brand">
+        <span class="brand-name">{{NAME}}</span>
+        <span class="brand-role">{{JOB_TITLE}}</span>
+    </div>
+    <nav class="pill-nav" aria-label="Primary navigation">
+        <a href="index.html" class="active">Profile</a>
+        <a href="experience.html">Experience</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main id="main-content" class="page">
+
+    <section class="hero">
+        <div class="hero-copy">
+            <h1>{{NAME}}</h1>
+            <p class="job-title">{{JOB_TITLE}}</p>
+            <p class="contact">{{EMAIL}} | {{PHONE}}</p>
+            <p class="location">{{LOCATION}}</p>
+            {{BIO}}
+            {{SOCIAL_LINKS}}
+        </div>
+        <div class="hero-image">
+            {{PROFILE_IMAGE}}
+        </div>
+    </section>
+
+    <section class="cards">
+        <div class="card">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                {{SKILLS}}
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Education</h2>
+            {{EDUCATION_SUMMARY}}
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>Copyright {{YEAR}} {{NAME}}. Generated on {{GENERATED_DATE}}.</p>
+</footer>
+
+</body>
+</html>

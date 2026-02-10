@@ -1,0 +1,38 @@
+{
+  "name": "Slate",
+  "description": "A bold dark theme with electric accents and geometric sections",
+  "author": "Aiden Roskelley",
+  "version": "2.0",
+  "cssFile": "style.css",
+  "pages": [
+    {
+      "fileName": "page_profile.html",
+      "outputName": "index",
+      "title": "Profile"
+    },
+    {
+      "fileName": "page_experience.html",
+      "outputName": "experience",
+      "title": "Experience"
+    },
+    {
+      "fileName": "page_portfolio.html",
+      "outputName": "portfolio",
+      "title": "Portfolio"
+    },
+    {
+      "fileName": "page_contact.html",
+      "outputName": "contact",
+      "title": "Contact"
+    }
+  ],
+  "colors": {
+    "primary": "#33f0c9",
+    "primarySoft": "#123b37",
+    "background": "#0f141b",
+    "card": "#151c24",
+    "text": "#f2f5f9",
+    "muted": "#9aa7b2"
+  },
+  "staticFiles": []
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{NAME}} | Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="top-bar">
+    <div class="brand">
+        <span class="brand-name">{{NAME}}</span>
+        <span class="brand-role">{{JOB_TITLE}}</span>
+    </div>
+    <nav class="top-nav" aria-label="Primary navigation">
+        <a href="index.html">Profile</a>
+        <a href="experience.html" class="active">Experience</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main id="main-content" class="page">
+
+    <header class="page-header">
+        <h1>Experience</h1>
+        <p class="lead">Impact-driven roles and the work behind them.</p>
+    </header>
+
+    <section class="experience-columns">
+        <div class="experience-list">
+            {{EXPERIENCE}}
+        </div>
+        <aside class="experience-side">
+            <h2>Education</h2>
+            {{EDUCATION_DETAILED}}
+        </aside>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>Copyright {{YEAR}} {{NAME}}.</p>
+</footer>
+
+</body>
+</html>

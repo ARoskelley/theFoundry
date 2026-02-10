@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "siteName": "Cedar & Salt",
+    "tagline": "Coastal cuisine in the heart of downtown",
+    "domain": "cedarandsalt.com",
+    "language": "en",
+    "title": "Cedar & Salt | Fresh Coastal Cuisine",
+    "description": "Seasonal seafood, craft cocktails, and a warm dining room in downtown.",
+    "canonicalUrl": "https://cedarandsalt.com",
+    "ogImage": "assets/images/hero.svg",
+    "favicon": ""
+  },
+  "brand": {
+    "logo": "",
+    "colors": {
+      "primary": "#0E3B43",
+      "secondary": "#A2C9B9",
+      "accent": "#F0B429",
+      "background": "#FBF7F2",
+      "text": "#1F2A2E"
+    },
+    "fonts": {
+      "heading": "Fraunces",
+      "body": "Work Sans"
+    }
+  },
+  "hero": {
+    "headline": "Fresh coastal flavors, simply served.",
+    "subheadline": "Chef-driven plates, house-made pastas, and a curated wine list.",
+    "ctaText": "Reserve a Table",
+    "ctaLink": "#reservations",
+    "image": "assets/images/hero.svg"
+  },
+  "about": {
+    "title": "A dining room built for lingering",
+    "body": "We work with local fisheries and farms to bring the season to your table. Our menu changes often, but the hospitality stays the same.",
+    "image": "assets/images/about.svg"
+  },
+  "services": [
+    {
+      "title": "Dine-In",
+      "description": "A warm, relaxed experience with full table service.",
+      "icon": "assets/icons/plate.svg"
+    },
+    {
+      "title": "Private Events",
+      "description": "Custom menus for birthdays, anniversaries, and company dinners.",
+      "icon": "assets/icons/toast.svg"
+    },
+    {
+      "title": "Takeout",
+      "description": "Order online and pick up in under 20 minutes.",
+      "icon": "assets/icons/bag.svg"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Erica M.",
+      "quote": "Every dish was thoughtful and perfectly balanced.",
+      "role": "Local Guide",
+      "image": "assets/images/testimonial-1.svg"
+    },
+    {
+      "name": "Jon L.",
+      "quote": "The best seafood I have had all year.",
+      "role": "Food Critic",
+      "image": "assets/images/testimonial-2.svg"
+    }
+  ],
+  "cta": {
+    "title": "Ready for dinner?",
+    "body": "Reserve your table or join us at the bar.",
+    "buttonText": "Book Now",
+    "buttonLink": "#reservations"
+  },
+  "contact": {
+    "phone": "(555) 381-2210",
+    "email": "hello@cedarandsalt.com",
+    "address": "210 Harbor Ave, Suite 2, Portland, OR",
+    "hours": "Tue-Sun 4pm-10pm",
+    "mapEmbed": "<iframe src=\"https://maps.google.com/...\" loading=\"lazy\"></iframe>"
+  },
+  "locations": [
+    {
+      "label": "Downtown",
+      "address": "210 Harbor Ave, Suite 2, Portland, OR",
+      "phone": "(555) 381-2210"
+    }
+  ],
+  "social": [
+    { "label": "Instagram", "url": "https://instagram.com/cedarandsalt" },
+    { "label": "Facebook", "url": "https://facebook.com/cedarandsalt" }
+  ],
+  "restaurant": {
+    "menuSections": [
+      {
+        "title": "Starters",
+        "items": [
+          { "name": "Oysters on Ice", "description": "Lemon, mignonette", "price": "$16" },
+          { "name": "Charred Octopus", "description": "Chili oil, fingerling potatoes", "price": "$18" }
+        ]
+      },
+      {
+        "title": "Mains",
+        "items": [
+          { "name": "Seared Halibut", "description": "Fennel, saffron broth", "price": "$32" },
+          { "name": "House Tagliatelle", "description": "Crab, chili, lemon", "price": "$28" }
+        ]
+      }
+    ],
+    "reservations": {
+      "ctaText": "Reserve a Table",
+      "ctaLink": "https://resy.com/cedarandsalt"
+    },
+    "gallery": [
+      { "image": "assets/images/gallery-1.svg", "alt": "Dining room" },
+      { "image": "assets/images/gallery-2.svg", "alt": "Plated seafood" },
+      { "image": "assets/images/gallery-3.svg", "alt": "Bar cocktails" }
+    ]
+  }
+}

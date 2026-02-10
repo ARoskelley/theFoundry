@@ -1,0 +1,38 @@
+{
+  "name": "Editorial",
+  "description": "An editorial-style layout with serif headlines and generous whitespace",
+  "author": "Aiden Roskelley",
+  "version": "2.0",
+  "cssFile": "style.css",
+  "pages": [
+    {
+      "fileName": "page_profile.html",
+      "outputName": "index",
+      "title": "Profile"
+    },
+    {
+      "fileName": "page_experience.html",
+      "outputName": "experience",
+      "title": "Experience"
+    },
+    {
+      "fileName": "page_portfolio.html",
+      "outputName": "portfolio",
+      "title": "Portfolio"
+    },
+    {
+      "fileName": "page_contact.html",
+      "outputName": "contact",
+      "title": "Contact"
+    }
+  ],
+  "colors": {
+    "primary": "#9a3f2c",
+    "primarySoft": "#f7e8de",
+    "background": "#fbf6f0",
+    "card": "#ffffff",
+    "text": "#2a1f1a",
+    "muted": "#6d5c54"
+  },
+  "staticFiles": []
+}

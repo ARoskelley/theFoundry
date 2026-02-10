@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "siteName": "Summit Care Co.",
+    "tagline": "Reliable home services, done right.",
+    "domain": "summitcareco.com",
+    "language": "en",
+    "title": "Summit Care Co. | Home Services",
+    "description": "Annual maintenance plans and on-demand repairs from vetted technicians.",
+    "canonicalUrl": "https://summitcareco.com",
+    "ogImage": "assets/images/hero.svg",
+    "favicon": ""
+  },
+  "brand": {
+    "logo": "",
+    "colors": {
+      "primary": "#1D4ED8",
+      "secondary": "#93C5FD",
+      "accent": "#F59E0B",
+      "background": "#F8FAFC",
+      "text": "#0F172A"
+    },
+    "fonts": {
+      "heading": "Space Grotesk",
+      "body": "Manrope"
+    }
+  },
+  "hero": {
+    "headline": "Home services you can count on.",
+    "subheadline": "One team for HVAC, plumbing, and seasonal maintenance.",
+    "ctaText": "Book a Visit",
+    "ctaLink": "#contact",
+    "image": "assets/images/hero.svg"
+  },
+  "about": {
+    "title": "Local team, predictable pricing",
+    "body": "We provide clear estimates, courteous technicians, and quality repairs.",
+    "image": "assets/images/about.svg"
+  },
+  "services": [
+    { "title": "HVAC", "description": "Tune-ups, repairs, and replacements.", "icon": "assets/icons/fan.svg" },
+    { "title": "Plumbing", "description": "Leaks, fixtures, and drain cleaning.", "icon": "assets/icons/pipe.svg" },
+    { "title": "Maintenance", "description": "Seasonal inspections and safety checks.", "icon": "assets/icons/check.svg" }
+  ],
+  "testimonials": [
+    { "name": "Reggie P.", "quote": "Fast, polite, and priced fairly.", "role": "Customer", "image": "assets/images/testimonial-1.svg" }
+  ],
+  "cta": {
+    "title": "Get started today",
+    "body": "Book online or call us for same-day service.",
+    "buttonText": "Schedule Service",
+    "buttonLink": "#contact"
+  },
+  "contact": {
+    "phone": "(555) 210-9901",
+    "email": "support@summitcareco.com",
+    "address": "1200 Alpine Rd, Salt Lake City, UT",
+    "hours": "Mon-Sat 7am-8pm",
+    "mapEmbed": "<iframe src=\"https://maps.google.com/...\" loading=\"lazy\"></iframe>"
+  },
+  "locations": [
+    { "label": "Main Office", "address": "1200 Alpine Rd, Salt Lake City, UT", "phone": "(555) 210-9901" }
+  ],
+  "social": [
+    { "label": "Facebook", "url": "https://facebook.com/summitcareco" },
+    { "label": "Google", "url": "https://g.page/summitcareco" }
+  ],
+  "service": {
+    "pricing": [
+      { "name": "Essential", "price": "$29/mo", "features": ["Annual inspection", "Priority scheduling"] },
+      { "name": "Plus", "price": "$59/mo", "features": ["Two visits", "Discounted repairs", "Weekend support"] }
+    ],
+    "faqs": [
+      { "question": "Do you offer emergency service?", "answer": "Yes, same-day availability is limited but possible." },
+      { "question": "Are estimates free?", "answer": "Yes, for most services within our coverage area." }
+    ],
+    "coverage": {
+      "areas": ["Salt Lake City", "Sandy", "Draper", "Lehi"],
+      "notes": "Ask about extended coverage outside the metro area."
+    }
+  }
+}
