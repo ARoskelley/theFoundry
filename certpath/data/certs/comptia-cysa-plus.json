@@ -1,0 +1,20 @@
+{
+  "id": "comptia-cysa-plus",
+  "name": "CompTIA CySA+",
+  "issuer": "CompTIA",
+  "cost": 466,
+  "difficulty": "intermediate",
+  "duration_weeks": 12,
+  "description": "Intermediate cybersecurity analyst certification focused on threat detection and response.",
+  "prerequisites": ["comptia-security-plus"],
+  "leads_to": ["comptia-casp-plus"],
+  "useful_for_occupations": ["security-analyst", "threat-intelligence-analyst"],
+  "industry": "cybersecurity",
+  "exam_details": {
+    "questions": 85,
+    "passing_score": 750,
+    "time_minutes": 165
+  },
+  "last_updated": "2025-02",
+  "sources": ["https://www.comptia.org/certifications/cybersecurity-analyst"]
+}

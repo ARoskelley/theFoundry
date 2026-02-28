@@ -1,0 +1,20 @@
+{
+  "id": "comptia-security-plus",
+  "name": "CompTIA Security+",
+  "issuer": "CompTIA",
+  "cost": 392,
+  "difficulty": "beginner",
+  "duration_weeks": 8,
+  "description": "Entry-level security certification covering core cybersecurity skills and best practices.",
+  "prerequisites": [],
+  "leads_to": ["comptia-cysa-plus", "comptia-pentest-plus"],
+  "useful_for_occupations": ["security-analyst", "network-admin", "it-auditor"],
+  "industry": "cybersecurity",
+  "exam_details": {
+    "questions": 90,
+    "passing_score": 750,
+    "time_minutes": 90
+  },
+  "last_updated": "2025-02",
+  "sources": ["https://www.comptia.org/certifications/security"]
+}
