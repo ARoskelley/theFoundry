@@ -19,7 +19,7 @@ export default function Navbar() {
       </Link>
       <div style={{ display: 'flex', gap: '32px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
         <Link href="/">Industries</Link>
-        {/* Add more nav links as the app grows */}
+        <Link href="/certs">Certs</Link>
       </div>
     </nav>
   )

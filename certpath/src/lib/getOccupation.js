@@ -18,10 +18,18 @@ export function getAllOccupationIds() {
   return index.occupations
 }
 
+export function getAllOccupations() {
+  return getAllOccupationIds().map(id => getOccupation(id)).filter(Boolean)
+}
+
 export function getOccupationsByIndustry(industry) {
   const index = JSON.parse(fs.readFileSync(path.join(occupationsDir, 'index.json'), 'utf-8'))
   const ids = index.industries[industry] || []
   return ids.map(id => getOccupation(id)).filter(Boolean)
+}
+
+export function getOccupationsByIds(ids) {
+  return (ids || []).map(id => getOccupation(id)).filter(Boolean)
 }
 
 export function getAllIndustries() {

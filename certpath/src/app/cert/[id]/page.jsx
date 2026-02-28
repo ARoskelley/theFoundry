@@ -1,4 +1,7 @@
 import { getCert, getAllCertIds } from '@/lib/getCert'
+import { getOccupationsByIds } from '@/lib/getOccupation'
+import OccupationCard from '@/components/occupation/OccupationCard'
+import ProgressToggle from '@/components/progress/ProgressToggle'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
@@ -18,16 +21,26 @@ export default async function CertPage({ params }) {
 
   if (!cert) return notFound()
 
+  const relatedOccupations = getOccupationsByIds(cert.useful_for_occupations)
+  const relatedOccupationIds = new Set(relatedOccupations.map(occupation => occupation.id))
+  const unresolvedOccupationIds = (cert.useful_for_occupations || []).filter(
+    occupationId => !relatedOccupationIds.has(occupationId)
+  )
+
   return (
-    <div style={{ padding: '60px 40px', maxWidth: '800px', margin: '0 auto' }}>
+    <div style={{ padding: '60px 40px', maxWidth: '1000px', margin: '0 auto' }}>
       <p style={{ color: 'var(--accent)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem' }}>
         {cert.issuer}
       </p>
       <h1 style={{ fontSize: '2.2rem', marginBottom: '12px' }}>{cert.name}</h1>
       <p style={{ color: 'var(--text-muted)', marginBottom: '32px' }}>{cert.description}</p>
 
+      <div style={{ marginBottom: '32px' }}>
+        <ProgressToggle certId={cert.id} />
+      </div>
+
       <div style={{ display: 'flex', gap: '24px', marginBottom: '40px', flexWrap: 'wrap' }}>
-        <Stat label="Cost" value={`$${cert.cost}`} />
+        <Stat label="Cost" value={`$${cert.cost.toLocaleString()}`} />
         <Stat label="Est. Duration" value={`${cert.duration_weeks} weeks`} />
         <Stat label="Difficulty" value={cert.difficulty} color={difficultyColors[cert.difficulty]} />
         {cert.exam_details && (
@@ -54,10 +67,26 @@ export default async function CertPage({ params }) {
         </Section>
       )}
 
-      {cert.useful_for_occupations?.length > 0 && (
-        <Section title="Helpful For These Roles">
-          {cert.useful_for_occupations.map(oid => (
-            <OccupationLink key={oid} id={oid} />
+      {relatedOccupations.length > 0 && (
+        <div style={{ marginBottom: '32px' }}>
+          <h2 style={{ fontSize: '1rem', color: 'var(--text-muted)', marginBottom: '12px', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+            Start From This Cert
+          </h2>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '18px', lineHeight: '1.5' }}>
+            These occupations already point back to this certification in the current roadmap data.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '18px' }}>
+            {relatedOccupations.map(occupation => (
+              <OccupationCard key={occupation.id} occupation={occupation} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {unresolvedOccupationIds.length > 0 && (
+        <Section title={relatedOccupations.length ? 'Additional Linked Roles' : 'Linked Roles'}>
+          {unresolvedOccupationIds.map(occupationId => (
+            <OccupationTag key={occupationId} id={occupationId} />
           ))}
         </Section>
       )}
@@ -99,10 +128,10 @@ function CertLink({ id }) {
   )
 }
 
-function OccupationLink({ id }) {
+function OccupationTag({ id }) {
   const label = id.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
   return (
-    <Link href={`/occupation/${id}`} style={{
+    <span style={{
       background: 'var(--surface)',
       border: '1px solid var(--border)',
       borderRadius: '8px',
@@ -111,6 +140,6 @@ function OccupationLink({ id }) {
       fontSize: '0.9rem',
     }}>
       {label}
-    </Link>
+    </span>
   )
 }

@@ -1,6 +1,7 @@
 import { getAllOccupationIds, getOccupation } from '@/lib/getOccupation'
 import { buildRoadmapNodes } from '@/lib/buildRoadmapNodes'
 import RoadmapFlow from '@/components/roadmap/RoadmapFlow'
+import RoadmapProgress from '@/components/progress/RoadmapProgress'
 import { notFound } from 'next/navigation'
 
 export function generateStaticParams() {
@@ -14,6 +15,7 @@ export default async function OccupationPage({ params }) {
   if (!occupation) return notFound()
 
   const { nodes, edges } = buildRoadmapNodes(occupation.suggested_certs)
+  const roadmapCertIds = nodes.map(node => node.id)
 
   return (
     <div style={{ padding: '60px 40px', maxWidth: '1400px', margin: '0 auto' }}>
@@ -31,6 +33,7 @@ export default async function OccupationPage({ params }) {
       </h2>
 
       {/* RoadmapFlow is a client component — data is passed as props */}
+      <RoadmapProgress certIds={roadmapCertIds} />
       <RoadmapFlow initialNodes={nodes} initialEdges={edges} />
     </div>
   )
