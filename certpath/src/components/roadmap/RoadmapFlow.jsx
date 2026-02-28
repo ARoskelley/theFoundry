@@ -2,6 +2,7 @@
 import ReactFlow, {
   Background,
   Controls,
+  MarkerType,
   MiniMap,
   useNodesState,
   useEdgesState,
@@ -15,8 +16,16 @@ const nodeTypes = {
 }
 
 export default function RoadmapFlow({ initialNodes, initialEdges }) {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes)
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges)
+  const [nodes, , onNodesChange] = useNodesState(initialNodes)
+  const [edges, , onEdgesChange] = useEdgesState(
+    initialEdges.map(edge => ({
+      ...edge,
+      markerEnd: {
+        type: MarkerType.ArrowClosed,
+        color: '#6366f1',
+      },
+    }))
+  )
 
   return (
     <div style={{
@@ -33,6 +42,9 @@ export default function RoadmapFlow({ initialNodes, initialEdges }) {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         nodeTypes={nodeTypes}
+        nodesDraggable={false}
+        nodesConnectable={false}
+        elementsSelectable={false}
         fitView
         fitViewOptions={{ padding: 0.3 }}
         proOptions={{ hideAttribution: true }}

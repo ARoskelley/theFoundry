@@ -1,10 +1,14 @@
-import { getOccupation } from '@/lib/getOccupation'
+import { getAllOccupationIds, getOccupation } from '@/lib/getOccupation'
 import { buildRoadmapNodes } from '@/lib/buildRoadmapNodes'
 import RoadmapFlow from '@/components/roadmap/RoadmapFlow'
 import { notFound } from 'next/navigation'
 
-export default function OccupationPage({ params }) {
-  const { id } = params
+export function generateStaticParams() {
+  return getAllOccupationIds().map(id => ({ id }))
+}
+
+export default async function OccupationPage({ params }) {
+  const { id } = await params
   const occupation = getOccupation(id)
 
   if (!occupation) return notFound()

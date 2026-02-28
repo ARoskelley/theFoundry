@@ -8,8 +8,12 @@ const difficultyColors = {
   advanced: '#ef4444',
 }
 
-export default function CertPage({ params }) {
-  const { id } = params
+export function generateStaticParams() {
+  return getAllCertIds().map(id => ({ id }))
+}
+
+export default async function CertPage({ params }) {
+  const { id } = await params
   const cert = getCert(id)
 
   if (!cert) return notFound()
