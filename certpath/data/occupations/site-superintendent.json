@@ -1,0 +1,11 @@
+{
+  "id": "site-superintendent",
+  "title": "Site Superintendent",
+  "industry": "construction",
+  "level": "senior",
+  "avg_salary": 111000,
+  "description": "Directs day-to-day field operations on a construction site, coordinating trades, managing subcontractors, enforcing safety protocols, and ensuring work is built per plans and specifications.",
+  "suggested_certs": ["osha-10-construction", "osha-30-construction", "ccm"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/management/construction-managers.htm"]
+}

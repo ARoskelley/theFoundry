@@ -1,0 +1,16 @@
+{
+  "id": "osha-10-construction",
+  "name": "OSHA 10-Hour Construction",
+  "issuer": "U.S. Occupational Safety and Health Administration",
+  "cost": 80,
+  "difficulty": "beginner",
+  "duration_weeks": 1,
+  "description": "Foundational construction safety training covering hazard recognition, fall protection, electrical safety, and PPE. Completion-based — no written exam. Earns a DOL wallet card. Required or preferred on most construction job sites.",
+  "prerequisites": [],
+  "leads_to": ["osha-30-construction"],
+  "useful_for_occupations": ["construction-manager", "site-superintendent", "construction-safety-officer", "green-building-consultant"],
+  "industry": "construction",
+  "exam_details": null,
+  "last_updated": "2026-01",
+  "sources": ["https://www.osha.gov/training/outreach/construction"]
+}

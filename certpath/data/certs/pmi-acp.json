@@ -1,0 +1,20 @@
+{
+  "id": "pmi-acp",
+  "name": "PMI Agile Certified Practitioner (PMI-ACP)",
+  "issuer": "Project Management Institute (PMI)",
+  "cost": 435,
+  "difficulty": "intermediate",
+  "duration_weeks": 12,
+  "description": "PMI's agile-focused credential spanning Scrum, Kanban, Lean, XP, and SAFe practices. Demonstrates ability to lead agile teams and apply agile principles across a variety of project environments.",
+  "prerequisites": ["capm"],
+  "leads_to": [],
+  "useful_for_occupations": ["scrum-master", "project-manager", "program-manager"],
+  "industry": "project-management",
+  "exam_details": {
+    "questions": 120,
+    "passing_score": null,
+    "time_minutes": 180
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.pmi.org/certifications/agile-acp"]
+}

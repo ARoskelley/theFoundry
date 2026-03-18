@@ -1,0 +1,16 @@
+{
+  "id": "google-data-analytics-certificate",
+  "name": "Google Data Analytics Professional Certificate",
+  "issuer": "Google",
+  "cost": 294,
+  "difficulty": "beginner",
+  "duration_weeks": 24,
+  "description": "Entry-level data analytics credential covering data cleaning, analysis, and visualization using SQL, R, and Tableau. Completed through Coursera at self-paced rate (cost based on ~6 months at $49/mo).",
+  "prerequisites": [],
+  "leads_to": ["aws-data-engineer-associate", "databricks-associate-developer-apache-spark"],
+  "useful_for_occupations": ["data-analyst"],
+  "industry": "data-science",
+  "exam_details": null,
+  "last_updated": "2026-01",
+  "sources": ["https://grow.google/certificates/data-analytics/"]
+}

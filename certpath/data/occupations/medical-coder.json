@@ -1,0 +1,11 @@
+{
+  "id": "medical-coder",
+  "title": "Medical Coder",
+  "industry": "healthcare",
+  "level": "entry",
+  "avg_salary": 52000,
+  "description": "Translates physician and facility documentation into standardized ICD-10, CPT, and HCPCS codes used for billing, reporting, and compliance in healthcare settings.",
+  "suggested_certs": ["cbcs", "cca", "cpc", "ccs"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/healthcare/medical-records-and-health-information-technicians.htm"]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "leed-green-associate",
+  "name": "LEED Green Associate",
+  "issuer": "U.S. Green Building Council (GBCI)",
+  "cost": 250,
+  "difficulty": "beginner",
+  "duration_weeks": 6,
+  "description": "Entry-level green building credential demonstrating knowledge of LEED rating systems, sustainable design principles, and green construction practices. Open to any professional — no project experience required.",
+  "prerequisites": [],
+  "leads_to": ["leed-ap-bdc"],
+  "useful_for_occupations": ["green-building-consultant", "construction-manager"],
+  "industry": "construction",
+  "exam_details": {
+    "questions": 100,
+    "passing_score": 170,
+    "time_minutes": 120
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.usgbc.org/credentials/leed-green-associate"]
+}

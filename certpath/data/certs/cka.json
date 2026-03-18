@@ -1,0 +1,20 @@
+{
+  "id": "cka",
+  "name": "Certified Kubernetes Administrator (CKA)",
+  "issuer": "Cloud Native Computing Foundation",
+  "cost": 395,
+  "difficulty": "intermediate",
+  "duration_weeks": 10,
+  "description": "Hands-on performance-based exam testing ability to install, configure, and manage production-grade Kubernetes clusters. Highly valued in platform and DevOps roles.",
+  "prerequisites": ["hashicorp-terraform-associate"],
+  "leads_to": [],
+  "useful_for_occupations": ["devops-engineer", "site-reliability-engineer", "cloud-engineer"],
+  "industry": "devops",
+  "exam_details": {
+    "questions": null,
+    "passing_score": 66,
+    "time_minutes": 120
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/"]
+}

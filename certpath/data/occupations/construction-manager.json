@@ -1,0 +1,11 @@
+{
+  "id": "construction-manager",
+  "title": "Construction Manager",
+  "industry": "construction",
+  "level": "senior",
+  "avg_salary": 107000,
+  "description": "Plans, coordinates, and supervises construction projects from bidding through closeout. Manages subcontractors, schedules, budgets, safety programs, and owner relationships on commercial or civil projects.",
+  "suggested_certs": ["osha-10-construction", "osha-30-construction", "pmp", "ccm"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/management/construction-managers.htm"]
+}

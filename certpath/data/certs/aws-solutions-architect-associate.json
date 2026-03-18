@@ -1,0 +1,20 @@
+{
+  "id": "aws-solutions-architect-associate",
+  "name": "AWS Certified Solutions Architect – Associate",
+  "issuer": "Amazon Web Services",
+  "cost": 150,
+  "difficulty": "intermediate",
+  "duration_weeks": 10,
+  "description": "The most popular AWS certification. Validates ability to design resilient, cost-optimized, high-performing, and secure AWS solutions.",
+  "prerequisites": ["aws-cloud-practitioner"],
+  "leads_to": ["aws-solutions-architect-professional", "aws-security-specialty"],
+  "useful_for_occupations": ["cloud-architect", "solutions-architect", "cloud-engineer"],
+  "industry": "cloud-computing",
+  "exam_details": {
+    "questions": 65,
+    "passing_score": 720,
+    "time_minutes": 130
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://aws.amazon.com/certification/certified-solutions-architect-associate/"]
+}

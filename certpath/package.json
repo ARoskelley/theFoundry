@@ -15,7 +15,7 @@
     "reactflow": "^11.11.3"
   },
   "devDependencies": {
-    "eslint": "^8",
+    "eslint": "^9",
     "eslint-config-next": "^16.1.6"
   }
 }

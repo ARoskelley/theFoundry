@@ -1,0 +1,11 @@
+{
+  "id": "hvac-technician",
+  "title": "HVAC Technician",
+  "industry": "hvac",
+  "level": "entry",
+  "avg_salary": 58000,
+  "description": "Installs, maintains, and repairs heating, ventilation, air conditioning, and refrigeration systems in residential and commercial buildings. EPA 608 certification is legally required to handle refrigerants.",
+  "suggested_certs": ["epa-608-universal", "nate-ready-to-work", "nate-core-specialty"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/installation-maintenance-and-repair/heating-air-conditioning-and-refrigeration-mechanics-and-installers.htm"]
+}

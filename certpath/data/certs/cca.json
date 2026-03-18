@@ -1,0 +1,20 @@
+{
+  "id": "cca",
+  "name": "Certified Coding Associate (CCA)",
+  "issuer": "AHIMA",
+  "cost": 299,
+  "difficulty": "beginner",
+  "duration_weeks": 10,
+  "description": "AHIMA's entry-level coding credential covering ICD-10-CM/PCS, CPT, and HCPCS Level II coding systems across physician and outpatient settings. Stepping stone toward CCS.",
+  "prerequisites": [],
+  "leads_to": ["ccs", "cpc"],
+  "useful_for_occupations": ["medical-coder"],
+  "industry": "healthcare",
+  "exam_details": {
+    "questions": 90,
+    "passing_score": 300,
+    "time_minutes": 120
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.ahima.org/certification-careers/certifications-overview/cca/"]
+}

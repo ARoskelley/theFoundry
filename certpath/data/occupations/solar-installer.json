@@ -1,0 +1,11 @@
+{
+  "id": "solar-installer",
+  "title": "Solar PV Installer",
+  "industry": "electrical",
+  "level": "entry",
+  "avg_salary": 55000,
+  "description": "Assembles, installs, and maintains photovoltaic solar panel systems on rooftops and ground-mounted arrays for residential and commercial customers. One of the fastest-growing occupations in the U.S.",
+  "suggested_certs": ["nabcep-pv-associate", "nabcep-pvip"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/construction-and-extraction/solar-photovoltaic-installers.htm"]
+}

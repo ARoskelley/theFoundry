@@ -1,0 +1,11 @@
+{
+  "id": "devops-engineer",
+  "title": "DevOps Engineer",
+  "industry": "devops",
+  "level": "mid",
+  "avg_salary": 130000,
+  "description": "Bridges development and operations by building CI/CD pipelines, automating infrastructure, and enabling faster, more reliable software delivery using modern DevOps toolchains.",
+  "suggested_certs": ["aws-cloud-practitioner", "hashicorp-terraform-associate", "docker-certified-associate", "cka", "aws-devops-engineer-professional"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"]
+}

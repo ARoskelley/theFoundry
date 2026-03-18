@@ -1,0 +1,11 @@
+{
+  "id": "electrician",
+  "title": "Electrician",
+  "industry": "electrical",
+  "level": "mid",
+  "avg_salary": 68000,
+  "description": "Installs, maintains, and troubleshoots electrical wiring, fixtures, equipment, and systems in residential, commercial, and industrial settings. Progression from apprentice to journeyman to master is governed by state licensing requirements.",
+  "suggested_certs": ["journeyman-electrician", "master-electrician"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/construction-and-extraction/electricians.htm"]
+}

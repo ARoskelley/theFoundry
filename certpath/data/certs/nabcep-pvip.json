@@ -1,0 +1,20 @@
+{
+  "id": "nabcep-pvip",
+  "name": "NABCEP PV Installation Professional (PVIP)",
+  "issuer": "North American Board of Certified Energy Practitioners (NABCEP)",
+  "cost": 500,
+  "difficulty": "intermediate",
+  "duration_weeks": 14,
+  "description": "The gold standard credential for solar PV installers. Requires 58+ hours of approved training plus documented field experience on commercial or residential PV projects. Widely required by solar contractors, utilities, and for AHJ permits.",
+  "prerequisites": ["nabcep-pv-associate"],
+  "leads_to": [],
+  "useful_for_occupations": ["solar-installer", "electrician"],
+  "industry": "electrical",
+  "exam_details": {
+    "questions": 60,
+    "passing_score": null,
+    "time_minutes": 240
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.nabcep.org/certifications/requirements-fees/"]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "azure-fundamentals",
+  "name": "Microsoft Azure Fundamentals (AZ-900)",
+  "issuer": "Microsoft",
+  "cost": 165,
+  "difficulty": "beginner",
+  "duration_weeks": 3,
+  "description": "Entry-level Azure certification covering cloud concepts, Azure services, security, privacy, compliance, and Azure pricing models.",
+  "prerequisites": [],
+  "leads_to": ["azure-administrator-associate"],
+  "useful_for_occupations": ["cloud-engineer", "solutions-architect", "devops-engineer"],
+  "industry": "cloud-computing",
+  "exam_details": {
+    "questions": 60,
+    "passing_score": 700,
+    "time_minutes": 65
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://learn.microsoft.com/en-us/certifications/azure-fundamentals/"]
+}

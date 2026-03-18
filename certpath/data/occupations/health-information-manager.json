@@ -1,0 +1,11 @@
+{
+  "id": "health-information-manager",
+  "title": "Health Information Manager",
+  "industry": "healthcare",
+  "level": "senior",
+  "avg_salary": 108000,
+  "description": "Oversees the acquisition, analysis, and security of patient health data across a healthcare organization. Manages coding departments, ensures regulatory compliance, and aligns health IT systems with clinical workflows.",
+  "suggested_certs": ["cca", "ccs", "rhia"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/management/medical-and-health-services-managers.htm"]
+}

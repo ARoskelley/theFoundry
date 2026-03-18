@@ -1,0 +1,20 @@
+{
+  "id": "gcp-cloud-digital-leader",
+  "name": "Google Cloud Digital Leader",
+  "issuer": "Google Cloud",
+  "cost": 200,
+  "difficulty": "beginner",
+  "duration_weeks": 3,
+  "description": "Foundational Google Cloud certification for understanding core GCP products, services, and the value of cloud transformation for organizations.",
+  "prerequisites": [],
+  "leads_to": ["gcp-associate-cloud-engineer"],
+  "useful_for_occupations": ["cloud-engineer", "solutions-architect"],
+  "industry": "cloud-computing",
+  "exam_details": {
+    "questions": 60,
+    "passing_score": null,
+    "time_minutes": 90
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://cloud.google.com/learn/certification/cloud-digital-leader"]
+}

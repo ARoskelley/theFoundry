@@ -1,0 +1,16 @@
+{
+  "id": "osha-30-construction",
+  "name": "OSHA 30-Hour Construction",
+  "issuer": "U.S. Occupational Safety and Health Administration",
+  "cost": 175,
+  "difficulty": "beginner",
+  "duration_weeks": 1,
+  "description": "Comprehensive construction safety training for supervisors and site leaders. Covers 30 hours of OSHA standards including fall protection, scaffolding, excavation, and confined spaces. Completion-based — earns a DOL wallet card.",
+  "prerequisites": ["osha-10-construction"],
+  "leads_to": ["ccm", "leed-green-associate"],
+  "useful_for_occupations": ["construction-manager", "site-superintendent", "construction-safety-officer"],
+  "industry": "construction",
+  "exam_details": null,
+  "last_updated": "2026-01",
+  "sources": ["https://www.osha.gov/training/outreach/construction"]
+}

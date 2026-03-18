@@ -1,0 +1,16 @@
+{
+  "id": "certified-welder",
+  "name": "AWS Certified Welder",
+  "issuer": "American Welding Society",
+  "cost": 300,
+  "difficulty": "beginner",
+  "duration_weeks": 6,
+  "description": "Performance-based certification proving a welder can produce a sound weld to a referenced code or standard. No written exam — tested at an AWS Accredited Testing Facility (ATF) by a CWI. Cost varies by ATF and process/position combination.",
+  "prerequisites": [],
+  "leads_to": ["cawi", "cwi"],
+  "useful_for_occupations": ["welder", "welding-inspector"],
+  "industry": "welding",
+  "exam_details": null,
+  "last_updated": "2026-01",
+  "sources": ["https://www.aws.org/certification-and-education/professional-certification/certified-welder-program/"]
+}

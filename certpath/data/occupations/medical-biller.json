@@ -1,0 +1,11 @@
+{
+  "id": "medical-biller",
+  "title": "Medical Biller",
+  "industry": "healthcare",
+  "level": "entry",
+  "avg_salary": 46000,
+  "description": "Processes patient insurance claims, submits bills to payers, follows up on denials, and manages accounts receivable for healthcare providers.",
+  "suggested_certs": ["cbcs", "cpc", "cpb"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/healthcare/medical-records-and-health-information-technicians.htm"]
+}

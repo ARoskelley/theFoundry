@@ -1,0 +1,20 @@
+{
+  "id": "gcp-associate-cloud-engineer",
+  "name": "Google Associate Cloud Engineer",
+  "issuer": "Google Cloud",
+  "cost": 200,
+  "difficulty": "intermediate",
+  "duration_weeks": 10,
+  "description": "Validates ability to deploy applications, monitor operations, and manage enterprise solutions on Google Cloud using the console and CLI.",
+  "prerequisites": ["gcp-cloud-digital-leader"],
+  "leads_to": ["gcp-professional-cloud-architect"],
+  "useful_for_occupations": ["cloud-engineer", "devops-engineer"],
+  "industry": "cloud-computing",
+  "exam_details": {
+    "questions": 50,
+    "passing_score": null,
+    "time_minutes": 120
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://cloud.google.com/learn/certification/cloud-engineer"]
+}

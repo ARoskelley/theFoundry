@@ -1,0 +1,11 @@
+{
+  "id": "data-analyst",
+  "title": "Data Analyst",
+  "industry": "data-science",
+  "level": "entry",
+  "avg_salary": 78000,
+  "description": "Collects, processes, and analyzes data to generate actionable business insights using SQL, Python, and visualization tools like Tableau or Power BI.",
+  "suggested_certs": ["google-data-analytics-certificate", "databricks-associate-developer-apache-spark"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/math/data-scientists.htm"]
+}

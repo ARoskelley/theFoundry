@@ -19,7 +19,10 @@ export default function Navbar() {
       </Link>
       <div style={{ display: 'flex', gap: '32px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
         <Link href="/">Industries</Link>
+        <Link href="/occupations">Occupations</Link>
         <Link href="/certs">Certs</Link>
+        <Link href="/compare">Compare</Link>
+        <Link href="/request">Request</Link>
       </div>
     </nav>
   )

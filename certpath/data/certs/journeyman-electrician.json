@@ -1,0 +1,20 @@
+{
+  "id": "journeyman-electrician",
+  "name": "Journeyman Electrician License",
+  "issuer": "State Electrical Licensing Board (varies by state)",
+  "cost": 200,
+  "difficulty": "intermediate",
+  "duration_weeks": 12,
+  "description": "State-issued license allowing an electrician to work independently on residential and commercial electrical systems. Requires completion of a 4–5 year apprenticeship (8,000 hours) or equivalent trade school plus field hours. Exam content is based on the National Electrical Code (NEC). Cost and requirements vary significantly by state.",
+  "prerequisites": [],
+  "leads_to": ["master-electrician"],
+  "useful_for_occupations": ["electrician"],
+  "industry": "electrical",
+  "exam_details": {
+    "questions": 80,
+    "passing_score": 70,
+    "time_minutes": 180
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/construction-and-extraction/electricians.htm"]
+}

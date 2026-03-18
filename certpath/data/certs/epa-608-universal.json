@@ -1,0 +1,20 @@
+{
+  "id": "epa-608-universal",
+  "name": "EPA 608 Universal Certification",
+  "issuer": "U.S. Environmental Protection Agency",
+  "cost": 70,
+  "difficulty": "beginner",
+  "duration_weeks": 3,
+  "description": "Legally required certification for any technician who purchases, handles, or reclaims refrigerants. The Universal credential covers all 4 sections (Core, Type I, II, III) in one sitting, qualifying for work on all refrigeration equipment types.",
+  "prerequisites": [],
+  "leads_to": ["nate-ready-to-work"],
+  "useful_for_occupations": ["hvac-technician", "hvac-service-manager"],
+  "industry": "hvac",
+  "exam_details": {
+    "questions": 100,
+    "passing_score": 72,
+    "time_minutes": 180
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.epa.gov/section608/section-608-technician-certification"]
+}

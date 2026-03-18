@@ -1,0 +1,11 @@
+{
+  "id": "hvac-service-manager",
+  "title": "HVAC Service Manager",
+  "industry": "hvac",
+  "level": "senior",
+  "avg_salary": 91000,
+  "description": "Leads a team of HVAC technicians, manages service dispatching, maintains customer relationships, oversees training and quality control, and handles complex diagnostic escalations.",
+  "suggested_certs": ["epa-608-universal", "nate-core-specialty", "hvac-excellence-master-specialist"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/installation-maintenance-and-repair/heating-air-conditioning-and-refrigeration-mechanics-and-installers.htm"]
+}

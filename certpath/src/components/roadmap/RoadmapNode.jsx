@@ -8,28 +8,79 @@ const difficultyColors = {
   advanced: '#ef4444',
 }
 
+const statusBorderColors = {
+  completed: '#22c55e',
+  ready: '#6366f1',
+  locked: 'var(--border)',
+}
+
 export default function RoadmapNode({ data }) {
-  const { cert } = data
+  const { cert, status, occupationId } = data
+  const isLocked = status === 'locked'
+  const isCompleted = status === 'completed'
+  const isReady = status === 'ready'
+  const borderColor = statusBorderColors[status] || 'var(--border)'
+  const href = `/cert/${cert.id}${occupationId ? `?from=${occupationId}` : ''}`
 
   return (
-    <div style={{
-      background: 'var(--bg)',
-      border: '1px solid var(--border)',
-      borderRadius: '12px',
-      padding: '14px 18px',
-      minWidth: '200px',
-      maxWidth: '220px',
-      cursor: 'pointer',
-      transition: 'border-color 0.15s',
-    }}
-      onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--accent)'}
-      onMouseLeave={e => e.currentTarget.style.borderColor = 'var(--border)'}
+    <div
+      style={{
+        background: 'var(--bg)',
+        border: `1px solid ${borderColor}`,
+        borderRadius: '12px',
+        padding: '14px 18px',
+        minWidth: '200px',
+        maxWidth: '220px',
+        cursor: isLocked ? 'default' : 'pointer',
+        transition: 'border-color 0.15s, opacity 0.15s',
+        opacity: isLocked ? 0.5 : 1,
+        position: 'relative',
+      }}
+      onMouseEnter={e => { if (!isLocked) e.currentTarget.style.borderColor = 'var(--accent)' }}
+      onMouseLeave={e => { e.currentTarget.style.borderColor = borderColor }}
     >
-      {/* Target handle (receives arrows from prerequisites) */}
       <Handle type="target" position={Position.Left} style={{ background: 'var(--accent)' }} />
 
-      <Link href={`/cert/${cert.id}`}>
-        <p style={{ fontWeight: '600', fontSize: '0.9rem', marginBottom: '6px', color: 'var(--text)' }}>
+      {isCompleted && (
+        <div style={{
+          position: 'absolute',
+          top: '8px',
+          right: '10px',
+          fontSize: '0.65rem',
+          fontWeight: '700',
+          color: '#22c55e',
+          background: '#22c55e18',
+          padding: '2px 7px',
+          borderRadius: '99px',
+        }}>
+          ✓ Done
+        </div>
+      )}
+
+      {isReady && (
+        <div style={{
+          position: 'absolute',
+          top: '8px',
+          right: '10px',
+          fontSize: '0.65rem',
+          fontWeight: '700',
+          color: '#6366f1',
+          background: '#6366f118',
+          padding: '2px 7px',
+          borderRadius: '99px',
+        }}>
+          Ready
+        </div>
+      )}
+
+      <Link href={href}>
+        <p style={{
+          fontWeight: '600',
+          fontSize: '0.9rem',
+          marginBottom: '6px',
+          color: 'var(--text)',
+          paddingRight: isCompleted || isReady ? '44px' : '0',
+        }}>
           {cert.name}
         </p>
         <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '8px' }}>
@@ -46,12 +97,11 @@ export default function RoadmapNode({ data }) {
             {cert.difficulty}
           </span>
           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-            ${cert.cost}
+            ${(cert.cost || 0).toLocaleString()}
           </span>
         </div>
       </Link>
 
-      {/* Source handle (sends arrows to follow-up certs) */}
       <Handle type="source" position={Position.Right} style={{ background: 'var(--accent)' }} />
     </div>
   )

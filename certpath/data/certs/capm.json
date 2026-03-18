@@ -1,0 +1,20 @@
+{
+  "id": "capm",
+  "name": "Certified Associate in Project Management (CAPM)",
+  "issuer": "Project Management Institute (PMI)",
+  "cost": 225,
+  "difficulty": "beginner",
+  "duration_weeks": 8,
+  "description": "PMI's entry-level PM credential. Validates knowledge of project management fundamentals, the PMBOK® Guide, and foundational PM vocabulary. No project experience required — only 23 hours of PM education.",
+  "prerequisites": [],
+  "leads_to": ["pmp", "pmi-acp"],
+  "useful_for_occupations": ["project-manager", "scrum-master", "program-manager"],
+  "industry": "project-management",
+  "exam_details": {
+    "questions": 135,
+    "passing_score": null,
+    "time_minutes": 180
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.pmi.org/certifications/certified-associate-capm"]
+}

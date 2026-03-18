@@ -1,0 +1,20 @@
+{
+  "id": "hashicorp-terraform-associate",
+  "name": "HashiCorp Terraform Associate",
+  "issuer": "HashiCorp",
+  "cost": 70,
+  "difficulty": "intermediate",
+  "duration_weeks": 6,
+  "description": "Validates knowledge of infrastructure-as-code concepts and practical Terraform skills including configuration language, state management, modules, and provider ecosystem.",
+  "prerequisites": [],
+  "leads_to": ["aws-devops-engineer-professional"],
+  "useful_for_occupations": ["devops-engineer", "cloud-engineer", "site-reliability-engineer"],
+  "industry": "devops",
+  "exam_details": {
+    "questions": 57,
+    "passing_score": null,
+    "time_minutes": 60
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://developer.hashicorp.com/certifications/infrastructure-automation"]
+}

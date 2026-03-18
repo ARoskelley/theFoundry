@@ -1,6 +1,49 @@
 # CertPath
 
-An interactive certification roadmap explorer. Users pick an industry, explore occupations, and see a visual flowchart of the certifications they need — in order — to reach their career goals.
+An interactive certification roadmap explorer. Pick an industry, explore occupations, and see a visual flowchart of the certifications needed — in order — to reach your career goals.
+
+---
+
+## Quick Start
+
+### 1. Install dependencies
+
+```bash
+cd certpath
+npm install
+```
+
+### 2. Start the development server
+
+```bash
+npm run dev
+```
+
+Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+
+The app hot-reloads on file save, so changes to source files and JSON data are reflected immediately.
+
+### 3. Build for production
+
+```bash
+npm run build
+npm start
+```
+
+> The app uses Next.js static generation (`generateStaticParams`). All pages are pre-rendered at build time using the JSON files in `data/`. After adding new certs or occupations, re-run `npm run build` for a production deploy.
+
+---
+
+## Navigation
+
+| URL | What you see |
+|---|---|
+| `/` | Industry grid (pick a field to explore) |
+| `/industry/[id]` | Occupation cards for that industry |
+| `/occupation/[id]` | Visual cert roadmap flowchart + progress bar |
+| `/cert/[id]` | Cert detail — cost, exam info, prerequisites, linked roles |
+| `/certs` | Searchable, filterable directory of all certifications |
+| `/request` | Form to suggest a new industry |
 
 ---
 
@@ -8,7 +51,7 @@ An interactive certification roadmap explorer. Users pick an industry, explore o
 
 | Layer | Tool |
 |---|---|
-| Framework | Next.js 14 (App Router) |
+| Framework | Next.js (App Router) |
 | UI | React + inline styles |
 | Animations | Framer Motion |
 | Flowchart | React Flow |
@@ -22,10 +65,10 @@ An interactive certification roadmap explorer. Users pick an industry, explore o
 certpath/
 ├── data/
 │   ├── certs/
-│   │   ├── index.json                  # List of all cert IDs
+│   │   ├── index.json                  # List of all cert IDs (must be updated when adding certs)
 │   │   └── [cert-id].json             # One file per certification
 │   └── occupations/
-│       ├── index.json                  # List of all occupation IDs + industry map
+│       ├── index.json                  # Occupation IDs + industry map (must be updated)
 │       └── [occupation-id].json       # One file per occupation
 │
 ├── src/
@@ -35,7 +78,9 @@ certpath/
 │   │   ├── page.jsx                   # Landing page — industry grid
 │   │   ├── industry/[id]/page.jsx     # Occupation explorer for an industry
 │   │   ├── occupation/[id]/page.jsx   # Cert roadmap flowchart
-│   │   └── cert/[id]/page.jsx         # Cert detail page
+│   │   ├── cert/[id]/page.jsx         # Cert detail page
+│   │   ├── certs/page.jsx             # Searchable cert directory
+│   │   └── request/page.jsx           # "Request an Industry" form
 │   │
 │   ├── components/
 │   │   ├── layout/
@@ -44,9 +89,15 @@ certpath/
 │   │   │   └── IndustryCard.jsx       # Clickable card on landing page
 │   │   ├── occupation/
 │   │   │   └── OccupationCard.jsx     # Clickable card on industry page
-│   │   └── roadmap/
-│   │       ├── RoadmapFlow.jsx        # React Flow canvas (client component)
-│   │       └── RoadmapNode.jsx        # Custom node rendered inside the flow
+│   │   ├── cert/
+│   │   │   └── CertDirectory.jsx      # Search + filter UI for /certs
+│   │   ├── roadmap/
+│   │   │   ├── RoadmapFlow.jsx        # React Flow canvas (client component)
+│   │   │   └── RoadmapNode.jsx        # Custom node rendered inside the flow
+│   │   └── progress/
+│   │       ├── RoadmapProgress.jsx    # Progress bar on occupation page
+│   │       ├── ProgressToggle.jsx     # "Mark as Completed" button per cert
+│   │       └── useCompletedCerts.js   # localStorage hook (syncs across tabs)
 │   │
 │   └── lib/
 │       ├── getCert.js                 # Reads cert JSON files by ID
@@ -56,33 +107,17 @@ certpath/
 
 ---
 
-## Getting Started
-
-### 1. Install dependencies
-
-```bash
-npm install
-```
-
-### 2. Run the dev server
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
----
-
 ## How the Data Works
 
-### Cert files (`data/certs/[id].json`)
+### Cert files (`data/certs/[cert-id].json`)
 
-Each cert has a unique `id` that matches its filename. The key fields are:
+Each cert has a unique `id` matching its filename. Key fields:
 
-- `prerequisites` — array of cert IDs that should be completed first
-- `leads_to` — array of cert IDs this unlocks
-- `useful_for_occupations` — array of occupation IDs this cert helps with
+- `prerequisites` — cert IDs that should be completed first
+- `leads_to` — cert IDs this unlocks (used on the cert detail page)
+- `useful_for_occupations` — occupation IDs this cert appears in
+- `sources` — array of URLs; `sources[0]` is used as the "Official Site" link
+- `exam_details` — optional object; any field can be `null` if not applicable
 
 ```json
 {
@@ -92,18 +127,24 @@ Each cert has a unique `id` that matches its filename. The key fields are:
   "cost": 392,
   "difficulty": "beginner",
   "duration_weeks": 8,
+  "description": "Entry-level security certification...",
   "prerequisites": [],
-  "leads_to": ["comptia-cysa-plus"],
+  "leads_to": ["comptia-cysa-plus", "comptia-pentest-plus"],
   "useful_for_occupations": ["security-analyst"],
   "industry": "cybersecurity",
-  "last_updated": "2025-02",
+  "exam_details": {
+    "questions": 90,
+    "passing_score": 750,
+    "time_minutes": 90
+  },
+  "last_updated": "2026-01",
   "sources": ["https://www.comptia.org/certifications/security"]
 }
 ```
 
-### Occupation files (`data/occupations/[id].json`)
+### Occupation files (`data/occupations/[occupation-id].json`)
 
-Each occupation lists its `suggested_certs` in recommended order. The roadmap flowchart is built automatically from these IDs + the cert prerequisite chains.
+`suggested_certs` lists cert IDs in recommended order. The roadmap flowchart is built automatically from these IDs plus any pulled-in prerequisite chains.
 
 ```json
 {
@@ -114,18 +155,19 @@ Each occupation lists its `suggested_certs` in recommended order. The roadmap fl
   "avg_salary": 75000,
   "description": "Monitors systems and networks from cyber threats.",
   "suggested_certs": ["comptia-security-plus", "comptia-cysa-plus"],
-  "last_updated": "2025-02"
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/..."]
 }
 ```
 
 ### Index files
 
-`data/certs/index.json` lists all cert IDs:
+`data/certs/index.json` — every cert ID must be listed here:
 ```json
 { "certs": ["comptia-security-plus", "comptia-cysa-plus"] }
 ```
 
-`data/occupations/index.json` lists occupations grouped by industry:
+`data/occupations/index.json` — occupations grouped by industry:
 ```json
 {
   "industries": {
@@ -135,100 +177,100 @@ Each occupation lists its `suggested_certs` in recommended order. The roadmap fl
 }
 ```
 
-**When you add a new cert or occupation, you must also add its ID to the appropriate index file.**
+**Always update both index files when adding new certs or occupations.**
 
 ---
 
 ## Adding a New Industry
 
-1. Create occupation files in `data/occupations/` for each role in the industry
-2. Create cert files in `data/certs/` for each certification
-3. Update `data/occupations/index.json` — add the new industry key and list its occupation IDs
+1. Create occupation JSON files in `data/occupations/`
+2. Create cert JSON files in `data/certs/`
+3. Update `data/occupations/index.json` — add the industry key and its occupation IDs
 4. Update `data/certs/index.json` — add the new cert IDs
-5. Add an icon for the industry in `src/components/industry/IndustryCard.jsx` in the `industryIcons` map
+5. Add an icon for the industry in `src/components/industry/IndustryCard.jsx` (`industryIcons` map)
+6. If the industry name doesn't title-case cleanly (e.g. "devops" → "DevOps"), add it to `industryLabels` in the same file
 
 ---
 
-## Using Gemini Deep Research to Generate Data Files
+## Current Industries
 
-The recommended workflow for populating new industries:
-
-1. Use this prompt template in Gemini Deep Research:
-
-```
-Research the most in-demand certifications in the [INDUSTRY] industry.
-For each certification, provide:
-- Full name and issuing organization
-- Estimated cost (USD)
-- Difficulty level (beginner / intermediate / advanced)
-- Estimated study duration in weeks
-- Prerequisites (other certifications typically required first)
-- Which job titles benefit most from this cert
-- A brief description
-
-Also provide a list of common job titles/occupations in this industry with:
-- Typical entry/mid/senior classification
-- Average salary (USD)
-- The recommended certification order for someone entering this field
-
-Format the output so it can be directly converted to JSON files matching the schema above.
-```
-
-2. Use Claude to format Gemini's output into properly structured JSON matching the schemas above.
-3. Drop the files into the correct folders and update both index files.
+| Industry | Occupations |
+|---|---|
+| Cybersecurity | Security Analyst, Penetration Tester, IT Auditor, Threat Intelligence Analyst, Cloud Security Engineer |
+| Cloud Computing | Cloud Engineer, Cloud Architect, Solutions Architect |
+| Networking | Network Admin, Network Engineer |
+| DevOps | DevOps Engineer, Site Reliability Engineer |
+| Data Science | Data Analyst, Data Engineer |
+| Healthcare | Medical Biller, Medical Coder, Health Information Manager, Revenue Cycle Specialist |
+| Welding | Welder, Welding Inspector, Welding Supervisor |
+| Construction | Construction Manager, Site Superintendent, Safety Officer, Green Building Consultant |
+| HVAC | HVAC Technician, HVAC Service Manager |
+| Electrical | Electrician, Solar PV Installer |
+| Project Management | Project Manager, Scrum Master, Program Manager |
 
 ---
 
 ## How the Roadmap Flowchart Works
 
-`src/lib/buildRoadmapNodes.js` is the brain of the visualization.
+`src/lib/buildRoadmapNodes.js` converts an occupation's `suggested_certs` into a React Flow graph:
 
-It takes an occupation's `suggested_certs` array and:
-1. Loads each cert file
-2. Calculates each cert's "depth" in the chain based on prerequisites
-3. Positions certs in columns by depth (no prerequisites = column 0)
-4. Builds React Flow `nodes` (each cert = one node) and `edges` (prerequisite arrows)
+1. Loads each cert file and recursively collects prerequisites
+2. Calculates each cert's "depth" based on its prerequisite chain (no prerequisites = depth 0)
+3. Groups certs into vertical columns by depth
+4. Generates React Flow nodes with x/y positions and edges from prerequisite relationships
 
-The React Flow canvas in `RoadmapFlow.jsx` renders these with pan, zoom, and an animated minimap. Each node is a `RoadmapNode` that links to the cert detail page on click.
+The canvas in `RoadmapFlow.jsx` renders these with pan, zoom, minimap, and animated edges. Each node links to the cert detail page on click.
+
+---
+
+## Progress Tracking
+
+Progress is stored in `localStorage` under the key `certpath-completed-certs`. It persists across sessions and syncs across browser tabs via a custom storage event. No account or backend needed.
+
+- **Occupation page** — shows a progress bar ("X of Y roadmap certs completed")
+- **Cert detail page** — "Mark as Completed" toggle button
+- **Cert directory** — compact toggle button on each card
 
 ---
 
 ## Styling
 
-The app uses CSS custom properties defined in `globals.css`. The core palette:
+CSS custom properties defined in `globals.css`:
 
 | Variable | Use |
 |---|---|
 | `--bg` | Page background |
 | `--surface` | Card/panel background |
 | `--border` | Card borders |
-| `--accent` | Primary purple (indigo) |
+| `--accent` | Primary indigo |
 | `--accent-light` | Lighter accent for links |
 | `--text` | Primary text |
 | `--text-muted` | Secondary/label text |
-| `--success` | Green (salaries, beginner difficulty) |
+| `--success` | Green (salaries, entry level) |
 | `--warning` | Amber (intermediate difficulty) |
 
-To adjust the visual theme, change the values in `:root` in `globals.css`.
+---
+
+## Planned Features
+
+- [x] Cert search / filter by industry, difficulty, cost (`/certs`)
+- [x] Progress tracking — mark certs as completed (localStorage)
+- [x] Reverse path: start from a cert, see linked occupations (`/cert/[id]`)
+- [x] Official Site links per cert (sources field → external button)
+- [x] "Request an Industry" form (`/request`)
+- [ ] User accounts + cloud-synced roadmap saving
+- [ ] Live job trend / job posting data via O*NET or Adzuna API
+- [ ] Salary range (min/max) in addition to average
+- [ ] Compare two certs side-by-side
+- [ ] Shareable roadmap URLs
 
 ---
 
-## Planned Features (Not Yet Built)
+## Developer Notes
 
-- [ ] Cert search / filter by industry, difficulty, cost
-- [ ] Reverse path: start from a cert, find occupations
-- [ ] User accounts + personal roadmap saving
-- [ ] Progress tracking (mark certs as completed)
-- [ ] Affiliate links per cert (monetization)
-- [ ] Live job trend data via Adzuna or O*NET APIs
-- [ ] "Request an industry" form
-
----
-
-## Notes for Codex
-
-- All data reading happens server-side using Node `fs` in the `lib/` helpers. Never import these in client components.
-- Components marked `'use client'` (IndustryCard, OccupationCard, RoadmapFlow, RoadmapNode) use browser APIs or React hooks. Server components pass data to them as props.
+- All data reading happens server-side using Node `fs` in `src/lib/`. Never import `getCert` or `getOccupation` in client components.
+- Components marked `'use client'` use browser APIs or React hooks. Server components pass data to them as props.
 - React Flow requires `'use client'` and its CSS must be imported: `import 'reactflow/dist/style.css'`
 - Framer Motion's `motion` components only work in client components.
-- IDs use kebab-case and must exactly match filenames and index entries.
+- All IDs use kebab-case and must exactly match their filenames and index entries.
+- `exam_details` fields (`questions`, `passing_score`, `time_minutes`) can be `null` for performance-based or state-variable credentials — the UI handles nulls gracefully.

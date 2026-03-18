@@ -1,0 +1,11 @@
+{
+  "id": "network-admin",
+  "title": "Network Administrator",
+  "industry": "networking",
+  "level": "entry",
+  "avg_salary": 72000,
+  "description": "Installs, configures, and maintains an organization's local area networks, wide area networks, and internet systems, ensuring daily operation and security.",
+  "suggested_certs": ["comptia-network-plus", "ccna"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/computer-and-information-technology/network-and-computer-systems-administrators.htm"]
+}

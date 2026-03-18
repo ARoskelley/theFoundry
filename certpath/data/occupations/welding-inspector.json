@@ -1,0 +1,11 @@
+{
+  "id": "welding-inspector",
+  "title": "Welding Inspector",
+  "industry": "welding",
+  "level": "mid",
+  "avg_salary": 82000,
+  "description": "Examines welds and welding procedures on construction, pipeline, pressure vessel, and structural steel projects to ensure compliance with codes such as AWS D1.1, ASME, and API standards.",
+  "suggested_certs": ["certified-welder", "cawi", "cwi"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.aws.org/certification-and-education/professional-certification/certified-welding-inspector/"]
+}

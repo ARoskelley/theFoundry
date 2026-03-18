@@ -1,0 +1,20 @@
+{
+  "id": "cwi",
+  "name": "Certified Welding Inspector (CWI)",
+  "issuer": "American Welding Society",
+  "cost": 1255,
+  "difficulty": "advanced",
+  "duration_weeks": 18,
+  "description": "The definitive welding inspection credential recognized across construction, oil & gas, manufacturing, and aerospace. A 3-part exam covers fundamental knowledge, practical application, and open-book code interpretation. Requires documented education and/or field experience.",
+  "prerequisites": ["cawi"],
+  "leads_to": ["cwe", "scwi"],
+  "useful_for_occupations": ["welding-inspector", "welding-supervisor"],
+  "industry": "welding",
+  "exam_details": {
+    "questions": 246,
+    "passing_score": 72,
+    "time_minutes": 360
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.aws.org/certification-and-education/professional-certification/certified-welding-inspector/"]
+}

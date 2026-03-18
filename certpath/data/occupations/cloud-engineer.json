@@ -1,0 +1,11 @@
+{
+  "id": "cloud-engineer",
+  "title": "Cloud Engineer",
+  "industry": "cloud-computing",
+  "level": "mid",
+  "avg_salary": 120000,
+  "description": "Builds, maintains, and optimizes cloud infrastructure using services from AWS, Azure, or GCP. Focuses on compute, storage, networking, and automation in the cloud.",
+  "suggested_certs": ["aws-cloud-practitioner", "aws-solutions-architect-associate", "hashicorp-terraform-associate", "cka"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"]
+}

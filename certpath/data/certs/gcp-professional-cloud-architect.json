@@ -1,0 +1,20 @@
+{
+  "id": "gcp-professional-cloud-architect",
+  "name": "Google Professional Cloud Architect",
+  "issuer": "Google Cloud",
+  "cost": 200,
+  "difficulty": "advanced",
+  "duration_weeks": 14,
+  "description": "Professional-level GCP certification for designing, developing, and managing dynamic, scalable, secure, and highly available cloud solutions on Google Cloud.",
+  "prerequisites": ["gcp-associate-cloud-engineer"],
+  "leads_to": [],
+  "useful_for_occupations": ["cloud-architect", "solutions-architect"],
+  "industry": "cloud-computing",
+  "exam_details": {
+    "questions": 60,
+    "passing_score": null,
+    "time_minutes": 120
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://cloud.google.com/learn/certification/cloud-architect"]
+}

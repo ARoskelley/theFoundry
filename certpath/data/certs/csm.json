@@ -1,0 +1,20 @@
+{
+  "id": "csm",
+  "name": "Certified ScrumMaster (CSM)",
+  "issuer": "Scrum Alliance",
+  "cost": 1200,
+  "difficulty": "beginner",
+  "duration_weeks": 2,
+  "description": "The most widely held Scrum credential. Requires attendance at a 2-day live CSM course taught by a Certified Scrum Trainer, followed by an online exam. Focuses on Scrum theory, ceremonies, roles, and team facilitation.",
+  "prerequisites": [],
+  "leads_to": ["pmi-acp"],
+  "useful_for_occupations": ["scrum-master", "project-manager"],
+  "industry": "project-management",
+  "exam_details": {
+    "questions": 50,
+    "passing_score": 74,
+    "time_minutes": 60
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster"]
+}

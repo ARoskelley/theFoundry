@@ -1,0 +1,20 @@
+{
+  "id": "docker-certified-associate",
+  "name": "Docker Certified Associate (DCA)",
+  "issuer": "Docker",
+  "cost": 195,
+  "difficulty": "intermediate",
+  "duration_weeks": 6,
+  "description": "Vendor certification validating container lifecycle management, image creation, orchestration with Docker Swarm, networking, security, and storage in Docker environments.",
+  "prerequisites": [],
+  "leads_to": ["cka"],
+  "useful_for_occupations": ["devops-engineer", "site-reliability-engineer"],
+  "industry": "devops",
+  "exam_details": {
+    "questions": 55,
+    "passing_score": null,
+    "time_minutes": 90
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://training.mirantis.com/certification/dca-certification-exam/"]
+}

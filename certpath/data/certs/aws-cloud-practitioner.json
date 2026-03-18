@@ -1,0 +1,20 @@
+{
+  "id": "aws-cloud-practitioner",
+  "name": "AWS Certified Cloud Practitioner",
+  "issuer": "Amazon Web Services",
+  "cost": 100,
+  "difficulty": "beginner",
+  "duration_weeks": 4,
+  "description": "Foundational AWS certification validating overall cloud fluency and AWS services knowledge. Ideal for non-technical and entry-level roles.",
+  "prerequisites": [],
+  "leads_to": ["aws-solutions-architect-associate", "aws-devops-engineer-professional"],
+  "useful_for_occupations": ["cloud-engineer", "solutions-architect", "devops-engineer"],
+  "industry": "cloud-computing",
+  "exam_details": {
+    "questions": 65,
+    "passing_score": 700,
+    "time_minutes": 90
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://aws.amazon.com/certification/certified-cloud-practitioner/"]
+}

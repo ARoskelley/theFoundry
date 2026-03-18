@@ -1,0 +1,20 @@
+{
+  "id": "aws-security-specialty",
+  "name": "AWS Certified Security – Specialty",
+  "issuer": "Amazon Web Services",
+  "cost": 300,
+  "difficulty": "advanced",
+  "duration_weeks": 14,
+  "description": "Deep-dive AWS security certification covering data protection, infrastructure security, identity management, logging, and monitoring on AWS.",
+  "prerequisites": ["aws-solutions-architect-associate", "comptia-security-plus"],
+  "leads_to": [],
+  "useful_for_occupations": ["cloud-security-engineer", "solutions-architect"],
+  "industry": "cybersecurity",
+  "exam_details": {
+    "questions": 65,
+    "passing_score": 750,
+    "time_minutes": 170
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://aws.amazon.com/certification/certified-security-specialty/"]
+}

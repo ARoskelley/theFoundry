@@ -1,0 +1,11 @@
+{
+  "id": "project-manager",
+  "title": "Project Manager",
+  "industry": "project-management",
+  "level": "mid",
+  "avg_salary": 97000,
+  "description": "Plans, executes, and closes projects within scope, budget, and schedule constraints across any industry. Manages cross-functional teams, stakeholder communications, risks, and change control.",
+  "suggested_certs": ["capm", "pmp"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/business-and-financial/project-management-specialists.htm"]
+}

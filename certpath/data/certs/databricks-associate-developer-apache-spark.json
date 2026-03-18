@@ -1,0 +1,20 @@
+{
+  "id": "databricks-associate-developer-apache-spark",
+  "name": "Databricks Certified Associate Developer for Apache Spark",
+  "issuer": "Databricks",
+  "cost": 200,
+  "difficulty": "intermediate",
+  "duration_weeks": 8,
+  "description": "Validates ability to use the Apache Spark DataFrame API, understand cluster architecture, and apply Spark transformations and actions using Python or Scala on the Databricks platform.",
+  "prerequisites": [],
+  "leads_to": [],
+  "useful_for_occupations": ["data-engineer", "data-analyst"],
+  "industry": "data-science",
+  "exam_details": {
+    "questions": 60,
+    "passing_score": 70,
+    "time_minutes": 120
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.databricks.com/learn/certification/apache-spark-developer-associate"]
+}

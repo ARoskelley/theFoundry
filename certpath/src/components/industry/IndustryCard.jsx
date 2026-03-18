@@ -7,14 +7,29 @@ const industryIcons = {
   cybersecurity: '🔐',
   'cloud-computing': '☁️',
   networking: '🌐',
+  devops: '⚙️',
+  'data-science': '📊',
   'project-management': '📋',
   healthcare: '🏥',
+  welding: '🔥',
+  construction: '🏗️',
+  hvac: '❄️',
+  electrical: '⚡',
   finance: '💹',
-  'data-science': '📊',
+}
+
+// Overrides for industry IDs that don't title-case nicely
+const industryLabels = {
+  devops: 'DevOps',
+  'data-science': 'Data Science',
+  'cloud-computing': 'Cloud Computing',
+  'project-management': 'Project Management',
+  hvac: 'HVAC',
 }
 
 export default function IndustryCard({ industry }) {
-  const label = industry.charAt(0).toUpperCase() + industry.slice(1).replace(/-/g, ' ')
+  const label = industryLabels[industry]
+    ?? (industry.charAt(0).toUpperCase() + industry.slice(1).replace(/-/g, ' '))
   const icon = industryIcons[industry] || '🏷️'
 
   return (

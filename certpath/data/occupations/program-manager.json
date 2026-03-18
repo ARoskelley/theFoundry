@@ -1,0 +1,11 @@
+{
+  "id": "program-manager",
+  "title": "Program Manager",
+  "industry": "project-management",
+  "level": "senior",
+  "avg_salary": 148000,
+  "description": "Oversees a portfolio of related projects, aligning them to strategic business objectives. Manages interdependencies, shared resources, and organizational change across multiple simultaneous project teams.",
+  "suggested_certs": ["capm", "pmp", "pmi-acp"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.pmi.org/certifications/program-management-pgmp"]
+}

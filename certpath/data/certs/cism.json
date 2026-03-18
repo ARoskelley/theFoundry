@@ -1,0 +1,20 @@
+{
+  "id": "cism",
+  "name": "CISM (Certified Information Security Manager)",
+  "issuer": "ISACA",
+  "cost": 575,
+  "difficulty": "advanced",
+  "duration_weeks": 18,
+  "description": "Management-focused security certification covering governance, risk management, incident management, and program development. Requires 5 years of ISRM experience.",
+  "prerequisites": ["comptia-cysa-plus"],
+  "leads_to": ["cissp"],
+  "useful_for_occupations": ["it-auditor", "security-analyst", "cloud-security-engineer"],
+  "industry": "cybersecurity",
+  "exam_details": {
+    "questions": 150,
+    "passing_score": 450,
+    "time_minutes": 240
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.isaca.org/credentialing/cism"]
+}

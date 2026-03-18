@@ -1,0 +1,11 @@
+{
+  "id": "cloud-architect",
+  "title": "Cloud Architect",
+  "industry": "cloud-computing",
+  "level": "senior",
+  "avg_salary": 160000,
+  "description": "Designs end-to-end cloud strategies and architectures for enterprise systems, ensuring scalability, reliability, security, and cost efficiency across cloud platforms.",
+  "suggested_certs": ["aws-cloud-practitioner", "aws-solutions-architect-associate", "aws-solutions-architect-professional"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/computer-and-information-technology/computer-network-architects.htm"]
+}

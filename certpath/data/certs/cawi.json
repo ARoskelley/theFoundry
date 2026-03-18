@@ -1,0 +1,20 @@
+{
+  "id": "cawi",
+  "name": "Certified Associate Welding Inspector (CAWI)",
+  "issuer": "American Welding Society",
+  "cost": 1220,
+  "difficulty": "intermediate",
+  "duration_weeks": 12,
+  "description": "Entry-level welding inspection credential requiring the same 3-part exam as the CWI (fundamentals, practical, code book). Valid for 3 years and cannot be renewed — functions as a pathway to the full CWI credential.",
+  "prerequisites": ["certified-welder"],
+  "leads_to": ["cwi"],
+  "useful_for_occupations": ["welding-inspector"],
+  "industry": "welding",
+  "exam_details": {
+    "questions": 246,
+    "passing_score": 72,
+    "time_minutes": 360
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.aws.org/certification-and-education/professional-certification/certified-associate-welding-inspector/"]
+}

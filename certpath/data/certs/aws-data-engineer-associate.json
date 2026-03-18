@@ -1,0 +1,20 @@
+{
+  "id": "aws-data-engineer-associate",
+  "name": "AWS Certified Data Engineer – Associate",
+  "issuer": "Amazon Web Services",
+  "cost": 150,
+  "difficulty": "intermediate",
+  "duration_weeks": 10,
+  "description": "Validates ability to design, build, and maintain data pipelines and solutions using AWS data services including Glue, Kinesis, Redshift, and Lake Formation.",
+  "prerequisites": ["aws-cloud-practitioner"],
+  "leads_to": [],
+  "useful_for_occupations": ["data-engineer"],
+  "industry": "data-science",
+  "exam_details": {
+    "questions": 65,
+    "passing_score": 720,
+    "time_minutes": 130
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://aws.amazon.com/certification/certified-data-engineer-associate/"]
+}

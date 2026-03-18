@@ -1,0 +1,11 @@
+{
+  "id": "threat-intelligence-analyst",
+  "title": "Threat Intelligence Analyst",
+  "industry": "cybersecurity",
+  "level": "mid",
+  "avg_salary": 95000,
+  "description": "Collects and analyzes data about current and emerging cyber threats, producing actionable intelligence reports to guide an organization's defensive security posture.",
+  "suggested_certs": ["comptia-security-plus", "ceh", "comptia-cysa-plus"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm"]
+}

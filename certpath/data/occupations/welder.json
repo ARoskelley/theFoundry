@@ -1,0 +1,11 @@
+{
+  "id": "welder",
+  "title": "Welder",
+  "industry": "welding",
+  "level": "entry",
+  "avg_salary": 51000,
+  "description": "Uses heat and filler metals to join or cut metallic parts in manufacturing, construction, pipelines, and fabrication shops. Specializations include MIG, TIG, stick, and flux-core welding.",
+  "suggested_certs": ["certified-welder"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/production/welders-cutters-solderers-and-brazers.htm"]
+}

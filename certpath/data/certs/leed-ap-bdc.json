@@ -1,0 +1,20 @@
+{
+  "id": "leed-ap-bdc",
+  "name": "LEED AP BD+C (Building Design and Construction)",
+  "issuer": "U.S. Green Building Council (GBCI)",
+  "cost": 350,
+  "difficulty": "intermediate",
+  "duration_weeks": 12,
+  "description": "Advanced LEED credential for professionals working on the design and construction of new buildings and major renovations. Validates expertise in sustainable site selection, energy efficiency, water conservation, and materials across LEED-registered projects.",
+  "prerequisites": ["leed-green-associate"],
+  "leads_to": [],
+  "useful_for_occupations": ["green-building-consultant", "construction-manager"],
+  "industry": "construction",
+  "exam_details": {
+    "questions": 100,
+    "passing_score": 170,
+    "time_minutes": 120
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.usgbc.org/credentials/leed-ap-bd-c"]
+}

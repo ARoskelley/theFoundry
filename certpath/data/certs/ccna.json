@@ -1,0 +1,20 @@
+{
+  "id": "ccna",
+  "name": "Cisco Certified Network Associate (CCNA)",
+  "issuer": "Cisco",
+  "cost": 330,
+  "difficulty": "intermediate",
+  "duration_weeks": 12,
+  "description": "Industry-standard networking certification covering IP connectivity, network access, security fundamentals, automation, and Cisco IOS. A foundational credential for network roles.",
+  "prerequisites": ["comptia-network-plus"],
+  "leads_to": ["ccnp-enterprise"],
+  "useful_for_occupations": ["network-engineer", "network-admin"],
+  "industry": "networking",
+  "exam_details": {
+    "questions": 120,
+    "passing_score": 825,
+    "time_minutes": 120
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html"]
+}

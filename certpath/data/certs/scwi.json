@@ -1,0 +1,20 @@
+{
+  "id": "scwi",
+  "name": "Senior Certified Welding Inspector (SCWI)",
+  "issuer": "American Welding Society",
+  "cost": 1965,
+  "difficulty": "advanced",
+  "duration_weeks": 24,
+  "description": "The highest AWS inspection credential, requiring 6 of 8 years as an active CWI plus 15 years total welding experience. As of 2025, achieved by passing 4 stackable CWI endorsement exams covering welder qualification, procedure qualification, QA coordination, and NDT coordination.",
+  "prerequisites": ["cwi"],
+  "leads_to": [],
+  "useful_for_occupations": ["welding-inspector", "welding-supervisor"],
+  "industry": "welding",
+  "exam_details": {
+    "questions": 200,
+    "passing_score": 72,
+    "time_minutes": 480
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.aws.org/certification-and-education/professional-certification/senior-certified-welding-inspector/"]
+}

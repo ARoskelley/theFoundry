@@ -1,0 +1,11 @@
+{
+  "id": "data-engineer",
+  "title": "Data Engineer",
+  "industry": "data-science",
+  "level": "mid",
+  "avg_salary": 120000,
+  "description": "Designs and maintains scalable data pipelines, warehouses, and lake architectures to enable analytics and machine learning workflows at organizational scale.",
+  "suggested_certs": ["google-data-analytics-certificate", "aws-cloud-practitioner", "aws-data-engineer-associate", "databricks-associate-developer-apache-spark"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/math/data-scientists.htm"]
+}

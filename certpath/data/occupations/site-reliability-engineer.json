@@ -1,0 +1,11 @@
+{
+  "id": "site-reliability-engineer",
+  "title": "Site Reliability Engineer (SRE)",
+  "industry": "devops",
+  "level": "senior",
+  "avg_salary": 150000,
+  "description": "Applies software engineering to infrastructure and operations problems, focusing on availability, latency, performance, efficiency, and incident response at scale.",
+  "suggested_certs": ["hashicorp-terraform-associate", "docker-certified-associate", "cka", "aws-devops-engineer-professional"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"]
+}

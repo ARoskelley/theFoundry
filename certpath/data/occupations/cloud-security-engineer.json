@@ -1,0 +1,11 @@
+{
+  "id": "cloud-security-engineer",
+  "title": "Cloud Security Engineer",
+  "industry": "cybersecurity",
+  "level": "senior",
+  "avg_salary": 138000,
+  "description": "Designs and implements security controls, policies, and architecture for cloud environments, bridging deep security expertise with cloud platform knowledge.",
+  "suggested_certs": ["comptia-security-plus", "comptia-cysa-plus", "aws-solutions-architect-associate", "aws-security-specialty", "cissp"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm"]
+}

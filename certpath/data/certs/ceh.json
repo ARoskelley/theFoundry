@@ -1,0 +1,20 @@
+{
+  "id": "ceh",
+  "name": "Certified Ethical Hacker (CEH)",
+  "issuer": "EC-Council",
+  "cost": 550,
+  "difficulty": "intermediate",
+  "duration_weeks": 10,
+  "description": "Recognized ethical hacking certification covering attack phases, footprinting, scanning, enumeration, and exploitation techniques used by real-world attackers.",
+  "prerequisites": ["comptia-network-plus"],
+  "leads_to": ["oscp", "comptia-pentest-plus"],
+  "useful_for_occupations": ["penetration-tester", "threat-intelligence-analyst"],
+  "industry": "cybersecurity",
+  "exam_details": {
+    "questions": 125,
+    "passing_score": 700,
+    "time_minutes": 240
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh/"]
+}

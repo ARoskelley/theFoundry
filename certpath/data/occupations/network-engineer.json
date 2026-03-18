@@ -1,0 +1,11 @@
+{
+  "id": "network-engineer",
+  "title": "Network Engineer",
+  "industry": "networking",
+  "level": "mid",
+  "avg_salary": 98000,
+  "description": "Designs, implements, and manages complex network infrastructure including routing, switching, security, and WAN technologies for enterprise organizations.",
+  "suggested_certs": ["comptia-network-plus", "ccna", "ccnp-enterprise"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/computer-and-information-technology/network-and-computer-systems-administrators.htm"]
+}

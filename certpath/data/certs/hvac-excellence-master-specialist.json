@@ -1,0 +1,16 @@
+{
+  "id": "hvac-excellence-master-specialist",
+  "name": "HVAC Excellence Master Specialist",
+  "issuer": "HVAC Excellence / ESCO Group",
+  "cost": 150,
+  "difficulty": "advanced",
+  "duration_weeks": 8,
+  "description": "The highest hands-on performance credential from HVAC Excellence. Requires a minimum of 3 years field experience, a passing score on a Professional-level written exam, and successful completion of a practical hands-on performance evaluation at an approved facility.",
+  "prerequisites": ["nate-core-specialty"],
+  "leads_to": [],
+  "useful_for_occupations": ["hvac-technician", "hvac-service-manager"],
+  "industry": "hvac",
+  "exam_details": null,
+  "last_updated": "2026-01",
+  "sources": ["https://www.escogroup.org/certifications/masterspecialist.aspx"]
+}

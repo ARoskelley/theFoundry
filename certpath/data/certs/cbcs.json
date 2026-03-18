@@ -1,0 +1,20 @@
+{
+  "id": "cbcs",
+  "name": "Certified Billing and Coding Specialist (CBCS)",
+  "issuer": "National Healthcareer Association (NHA)",
+  "cost": 117,
+  "difficulty": "beginner",
+  "duration_weeks": 8,
+  "description": "Entry-level credential for medical billing and coding roles. Covers ICD-10-CM, CPT, HCPCS code sets, insurance claims, reimbursement, and compliance. Designed for program graduates and career changers.",
+  "prerequisites": [],
+  "leads_to": ["cca", "cpc"],
+  "useful_for_occupations": ["medical-biller", "medical-coder"],
+  "industry": "healthcare",
+  "exam_details": {
+    "questions": 100,
+    "passing_score": 390,
+    "time_minutes": 180
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.nhanow.com/certification/nha-certifications/medical-billing-and-coding-specialist-(cbcs)"]
+}

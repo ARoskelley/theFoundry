@@ -1,0 +1,20 @@
+{
+  "id": "pmp",
+  "name": "Project Management Professional (PMP)",
+  "issuer": "Project Management Institute (PMI)",
+  "cost": 405,
+  "difficulty": "advanced",
+  "duration_weeks": 16,
+  "description": "The world's most recognized project management credential. Covers predictive, agile, and hybrid methodologies across initiation, planning, execution, and closure. Requires documented project leadership experience and 35 hours of PM education.",
+  "prerequisites": ["capm"],
+  "leads_to": [],
+  "useful_for_occupations": ["project-manager", "program-manager", "construction-manager"],
+  "industry": "project-management",
+  "exam_details": {
+    "questions": 180,
+    "passing_score": null,
+    "time_minutes": 230
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.pmi.org/certifications/project-management-pmp"]
+}

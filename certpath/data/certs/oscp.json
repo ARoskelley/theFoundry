@@ -1,0 +1,20 @@
+{
+  "id": "oscp",
+  "name": "OSCP (Offensive Security Certified Professional)",
+  "issuer": "Offensive Security",
+  "cost": 1499,
+  "difficulty": "advanced",
+  "duration_weeks": 20,
+  "description": "The most respected hands-on penetration testing certification. Requires completing a 24-hour proctored exam by compromising multiple live machines. Includes 90 days of lab access.",
+  "prerequisites": ["comptia-pentest-plus"],
+  "leads_to": [],
+  "useful_for_occupations": ["penetration-tester"],
+  "industry": "cybersecurity",
+  "exam_details": {
+    "questions": null,
+    "passing_score": 70,
+    "time_minutes": 1440
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.offsec.com/courses/pen-200/"]
+}

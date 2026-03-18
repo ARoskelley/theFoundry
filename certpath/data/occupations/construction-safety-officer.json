@@ -1,0 +1,11 @@
+{
+  "id": "construction-safety-officer",
+  "title": "Construction Safety Officer",
+  "industry": "construction",
+  "level": "mid",
+  "avg_salary": 74000,
+  "description": "Implements and enforces safety plans on construction sites, conducts hazard assessments, investigates incidents, trains workers on OSHA regulations, and ensures compliance with federal and local safety codes.",
+  "suggested_certs": ["osha-10-construction", "osha-30-construction"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/business-and-financial/occupational-health-and-safety-specialists.htm"]
+}

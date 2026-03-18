@@ -1,8 +1,92 @@
 {
   "industries": {
-    "cybersecurity": ["security-analyst"]
+    "cybersecurity": [
+      "security-analyst",
+      "penetration-tester",
+      "it-auditor",
+      "threat-intelligence-analyst",
+      "cloud-security-engineer"
+    ],
+    "cloud-computing": [
+      "cloud-engineer",
+      "cloud-architect",
+      "solutions-architect"
+    ],
+    "networking": [
+      "network-admin",
+      "network-engineer"
+    ],
+    "devops": [
+      "devops-engineer",
+      "site-reliability-engineer"
+    ],
+    "data-science": [
+      "data-analyst",
+      "data-engineer"
+    ],
+    "healthcare": [
+      "medical-biller",
+      "medical-coder",
+      "health-information-manager",
+      "revenue-cycle-specialist"
+    ],
+    "welding": [
+      "welder",
+      "welding-inspector",
+      "welding-supervisor"
+    ],
+    "construction": [
+      "construction-manager",
+      "site-superintendent",
+      "construction-safety-officer",
+      "green-building-consultant"
+    ],
+    "hvac": [
+      "hvac-technician",
+      "hvac-service-manager"
+    ],
+    "electrical": [
+      "electrician",
+      "solar-installer"
+    ],
+    "project-management": [
+      "project-manager",
+      "scrum-master",
+      "program-manager"
+    ]
   },
   "occupations": [
-    "security-analyst"
+    "security-analyst",
+    "penetration-tester",
+    "it-auditor",
+    "threat-intelligence-analyst",
+    "cloud-security-engineer",
+    "cloud-engineer",
+    "cloud-architect",
+    "solutions-architect",
+    "network-admin",
+    "network-engineer",
+    "devops-engineer",
+    "site-reliability-engineer",
+    "data-analyst",
+    "data-engineer",
+    "medical-biller",
+    "medical-coder",
+    "health-information-manager",
+    "revenue-cycle-specialist",
+    "welder",
+    "welding-inspector",
+    "welding-supervisor",
+    "construction-manager",
+    "site-superintendent",
+    "construction-safety-officer",
+    "green-building-consultant",
+    "hvac-technician",
+    "hvac-service-manager",
+    "electrician",
+    "solar-installer",
+    "project-manager",
+    "scrum-master",
+    "program-manager"
   ]
 }

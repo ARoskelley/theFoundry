@@ -1,0 +1,20 @@
+{
+  "id": "azure-administrator-associate",
+  "name": "Microsoft Certified: Azure Administrator Associate (AZ-104)",
+  "issuer": "Microsoft",
+  "cost": 165,
+  "difficulty": "intermediate",
+  "duration_weeks": 10,
+  "description": "Validates skills in managing Azure subscriptions, virtual machines, storage, networking, and identity. Core credential for Azure infrastructure roles.",
+  "prerequisites": ["azure-fundamentals"],
+  "leads_to": ["azure-solutions-architect-expert"],
+  "useful_for_occupations": ["cloud-engineer", "devops-engineer"],
+  "industry": "cloud-computing",
+  "exam_details": {
+    "questions": 60,
+    "passing_score": 700,
+    "time_minutes": 110
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://learn.microsoft.com/en-us/certifications/azure-administrator/"]
+}

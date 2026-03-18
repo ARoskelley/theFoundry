@@ -212,16 +212,31 @@ export default function CertDirectory({ certs, industries }) {
                   marginTop: 'auto',
                 }}
               >
-                <Link
-                  href={`/cert/${cert.id}`}
-                  style={{
-                    color: 'var(--accent-light)',
-                    fontWeight: '600',
-                    fontSize: '0.88rem',
-                  }}
-                >
-                  View Details
-                </Link>
+                <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
+                  <Link
+                    href={`/cert/${cert.id}`}
+                    style={{
+                      color: 'var(--accent-light)',
+                      fontWeight: '600',
+                      fontSize: '0.88rem',
+                    }}
+                  >
+                    View Details
+                  </Link>
+                  {cert.sources?.[0] && (
+                    <a
+                      href={cert.sources[0]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: 'var(--text-muted)',
+                        fontSize: '0.82rem',
+                      }}
+                    >
+                      Official Site ↗
+                    </a>
+                  )}
+                </div>
                 <ProgressToggle certId={cert.id} compact />
               </div>
             </article>

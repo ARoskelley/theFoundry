@@ -1,0 +1,11 @@
+{
+  "id": "penetration-tester",
+  "title": "Penetration Tester",
+  "industry": "cybersecurity",
+  "level": "mid",
+  "avg_salary": 98000,
+  "description": "Simulates cyberattacks on systems, networks, and applications to identify exploitable vulnerabilities before malicious actors can find them.",
+  "suggested_certs": ["comptia-network-plus", "comptia-security-plus", "ceh", "comptia-pentest-plus", "oscp"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm"]
+}

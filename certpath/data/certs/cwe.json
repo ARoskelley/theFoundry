@@ -1,0 +1,20 @@
+{
+  "id": "cwe",
+  "name": "Certified Welding Educator (CWE)",
+  "issuer": "American Welding Society",
+  "cost": 1100,
+  "difficulty": "intermediate",
+  "duration_weeks": 12,
+  "description": "Credential for welding professionals who teach or instruct. Combines a fundamentals written exam with a hands-on welding performance test, validating both technical knowledge and the ability to demonstrate proper welding technique in an educational setting.",
+  "prerequisites": ["cwi"],
+  "leads_to": [],
+  "useful_for_occupations": ["welding-supervisor"],
+  "industry": "welding",
+  "exam_details": {
+    "questions": 150,
+    "passing_score": 60,
+    "time_minutes": 120
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.aws.org/certification-and-education/professional-certification/certified-welding-educator/"]
+}

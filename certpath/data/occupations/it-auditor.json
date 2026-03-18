@@ -1,0 +1,11 @@
+{
+  "id": "it-auditor",
+  "title": "IT Auditor",
+  "industry": "cybersecurity",
+  "level": "mid",
+  "avg_salary": 88000,
+  "description": "Evaluates an organization's IT infrastructure, policies, and procedures to ensure security, compliance, and data integrity across systems and controls.",
+  "suggested_certs": ["comptia-security-plus", "comptia-cysa-plus", "cism", "cissp"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.isaca.org/credentialing/cisa"]
+}

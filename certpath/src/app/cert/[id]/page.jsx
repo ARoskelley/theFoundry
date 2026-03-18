@@ -2,8 +2,10 @@ import { getCert, getAllCertIds } from '@/lib/getCert'
 import { getOccupationsByIds } from '@/lib/getOccupation'
 import OccupationCard from '@/components/occupation/OccupationCard'
 import ProgressToggle from '@/components/progress/ProgressToggle'
+import CertBreadcrumb from '@/components/cert/CertBreadcrumb'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 const difficultyColors = {
   beginner: '#22c55e',
@@ -29,25 +31,72 @@ export default async function CertPage({ params }) {
 
   return (
     <div style={{ padding: '60px 40px', maxWidth: '1000px', margin: '0 auto' }}>
+      <Suspense fallback={null}>
+        <CertBreadcrumb />
+      </Suspense>
+
       <p style={{ color: 'var(--accent)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem' }}>
         {cert.issuer}
       </p>
       <h1 style={{ fontSize: '2.2rem', marginBottom: '12px' }}>{cert.name}</h1>
       <p style={{ color: 'var(--text-muted)', marginBottom: '32px' }}>{cert.description}</p>
 
-      <div style={{ marginBottom: '32px' }}>
+      <div style={{ display: 'flex', gap: '12px', marginBottom: '32px', flexWrap: 'wrap', alignItems: 'center' }}>
         <ProgressToggle certId={cert.id} />
+        <Link
+          href={`/compare?a=${cert.id}`}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '6px',
+            padding: '10px 18px',
+            borderRadius: '8px',
+            border: '1px solid var(--border)',
+            background: 'var(--surface)',
+            color: 'var(--text-muted)',
+            fontWeight: '600',
+            fontSize: '0.9rem',
+            textDecoration: 'none',
+          }}
+        >
+          Compare ⇄
+        </Link>
+        {cert.sources?.[0] && (
+          <a
+            href={cert.sources[0]}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              padding: '10px 18px',
+              borderRadius: '8px',
+              border: '1px solid var(--border)',
+              background: 'var(--surface)',
+              color: 'var(--accent-light)',
+              fontWeight: '600',
+              fontSize: '0.9rem',
+              textDecoration: 'none',
+            }}
+          >
+            Official Site ↗
+          </a>
+        )}
       </div>
 
       <div style={{ display: 'flex', gap: '24px', marginBottom: '40px', flexWrap: 'wrap' }}>
         <Stat label="Cost" value={`$${cert.cost.toLocaleString()}`} />
         <Stat label="Est. Duration" value={`${cert.duration_weeks} weeks`} />
         <Stat label="Difficulty" value={cert.difficulty} color={difficultyColors[cert.difficulty]} />
-        {cert.exam_details && (
-          <>
-            <Stat label="Questions" value={cert.exam_details.questions} />
-            <Stat label="Passing Score" value={cert.exam_details.passing_score} />
-          </>
+        {cert.exam_details?.questions != null && (
+          <Stat label="Questions" value={cert.exam_details.questions} />
+        )}
+        {cert.exam_details?.passing_score != null && (
+          <Stat label="Passing Score" value={cert.exam_details.passing_score} />
+        )}
+        {cert.exam_details?.time_minutes != null && (
+          <Stat label="Exam Time" value={`${cert.exam_details.time_minutes} min`} />
         )}
       </div>
 

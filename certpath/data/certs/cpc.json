@@ -1,0 +1,20 @@
+{
+  "id": "cpc",
+  "name": "Certified Professional Coder (CPC)",
+  "issuer": "AAPC",
+  "cost": 425,
+  "difficulty": "intermediate",
+  "duration_weeks": 14,
+  "description": "The most widely held coding credential in the U.S. Covers physician-based outpatient coding using ICD-10-CM, CPT, and HCPCS across 17 specialty domains. Open-book format using approved code books.",
+  "prerequisites": [],
+  "leads_to": ["cpb", "rhia"],
+  "useful_for_occupations": ["medical-coder", "revenue-cycle-specialist"],
+  "industry": "healthcare",
+  "exam_details": {
+    "questions": 100,
+    "passing_score": 70,
+    "time_minutes": 240
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.aapc.com/certifications/cpc"]
+}

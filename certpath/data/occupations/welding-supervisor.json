@@ -1,0 +1,11 @@
+{
+  "id": "welding-supervisor",
+  "title": "Welding Supervisor",
+  "industry": "welding",
+  "level": "mid",
+  "avg_salary": 76000,
+  "description": "Oversees welding crews, develops and qualifies welding procedures, ensures quality and safety standards are met on fabrication or construction projects, and mentors junior welders.",
+  "suggested_certs": ["certified-welder", "cwi", "cwe"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.bls.gov/ooh/production/welders-cutters-solderers-and-brazers.htm"]
+}

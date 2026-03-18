@@ -1,0 +1,20 @@
+{
+  "id": "comptia-casp-plus",
+  "name": "CompTIA CASP+",
+  "issuer": "CompTIA",
+  "cost": 512,
+  "difficulty": "advanced",
+  "duration_weeks": 16,
+  "description": "Advanced-level security certification for practitioners (not managers) who design and implement solutions in complex enterprise environments.",
+  "prerequisites": ["comptia-cysa-plus"],
+  "leads_to": ["cissp"],
+  "useful_for_occupations": ["cloud-security-engineer", "it-auditor", "security-analyst"],
+  "industry": "cybersecurity",
+  "exam_details": {
+    "questions": 90,
+    "passing_score": null,
+    "time_minutes": 165
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.comptia.org/certifications/comptia-advanced-security-practitioner"]
+}

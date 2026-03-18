@@ -1,0 +1,20 @@
+{
+  "id": "comptia-network-plus",
+  "name": "CompTIA Network+",
+  "issuer": "CompTIA",
+  "cost": 338,
+  "difficulty": "beginner",
+  "duration_weeks": 6,
+  "description": "Vendor-neutral networking certification covering infrastructure, operations, security, and troubleshooting for network technicians.",
+  "prerequisites": [],
+  "leads_to": ["comptia-security-plus", "ccna", "ceh"],
+  "useful_for_occupations": ["network-admin", "network-engineer", "it-auditor"],
+  "industry": "networking",
+  "exam_details": {
+    "questions": 90,
+    "passing_score": 720,
+    "time_minutes": 90
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.comptia.org/certifications/network"]
+}

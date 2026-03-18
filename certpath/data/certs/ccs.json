@@ -1,0 +1,20 @@
+{
+  "id": "ccs",
+  "name": "Certified Coding Specialist (CCS)",
+  "issuer": "AHIMA",
+  "cost": 299,
+  "difficulty": "intermediate",
+  "duration_weeks": 14,
+  "description": "AHIMA's advanced coding credential targeting hospital inpatient coding. Validates expert-level knowledge of ICD-10-CM/PCS, CPT, and DRG assignment for facility-based settings.",
+  "prerequisites": ["cca"],
+  "leads_to": ["rhia"],
+  "useful_for_occupations": ["medical-coder", "health-information-manager"],
+  "industry": "healthcare",
+  "exam_details": {
+    "questions": 97,
+    "passing_score": 300,
+    "time_minutes": 240
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.ahima.org/certification-careers/certifications-overview/ccs/"]
+}

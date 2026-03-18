@@ -1,0 +1,20 @@
+{
+  "id": "nate-ready-to-work",
+  "name": "NATE Ready-to-Work Certificate",
+  "issuer": "North American Technician Excellence (NATE)",
+  "cost": 60,
+  "difficulty": "beginner",
+  "duration_weeks": 2,
+  "description": "Entry-level HVAC credential for career changers and students with no prior experience. Tests foundational knowledge of tools, safety, and basic HVAC concepts. Taken online without proctoring and valid for 5 years.",
+  "prerequisites": ["epa-608-universal"],
+  "leads_to": ["nate-core-specialty"],
+  "useful_for_occupations": ["hvac-technician"],
+  "industry": "hvac",
+  "exam_details": {
+    "questions": 50,
+    "passing_score": 70,
+    "time_minutes": 90
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://natex.org/technician/take-an-exam/nate-certificates-and-certification-exams"]
+}

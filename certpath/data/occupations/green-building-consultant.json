@@ -1,0 +1,11 @@
+{
+  "id": "green-building-consultant",
+  "title": "Green Building Consultant",
+  "industry": "construction",
+  "level": "mid",
+  "avg_salary": 90000,
+  "description": "Advises design and construction teams on sustainable building strategies, LEED documentation, energy modeling, and green certification processes to achieve environmental performance goals.",
+  "suggested_certs": ["osha-10-construction", "leed-green-associate", "leed-ap-bdc"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.usgbc.org/credentials/leed-ap-bd-c"]
+}

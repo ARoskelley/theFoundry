@@ -1,0 +1,20 @@
+{
+  "id": "nate-core-specialty",
+  "name": "NATE Core + Specialty Certification",
+  "issuer": "North American Technician Excellence (NATE)",
+  "cost": 300,
+  "difficulty": "intermediate",
+  "duration_weeks": 12,
+  "description": "The most recognized HVAC technician credential in the industry. Requires passing a Core knowledge exam plus one or more Specialty exams (Air Conditioning, Heat Pumps, Gas Heat, Oil Heat, Refrigeration, etc.). Endorsed by major manufacturers and ACCA.",
+  "prerequisites": ["nate-ready-to-work"],
+  "leads_to": ["hvac-excellence-master-specialist"],
+  "useful_for_occupations": ["hvac-technician", "hvac-service-manager"],
+  "industry": "hvac",
+  "exam_details": {
+    "questions": 150,
+    "passing_score": 70,
+    "time_minutes": 240
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://natex.org/technician/take-an-exam/nate-certificates-and-certification-exams"]
+}

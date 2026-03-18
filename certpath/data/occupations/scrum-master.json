@@ -1,0 +1,11 @@
+{
+  "id": "scrum-master",
+  "title": "Scrum Master",
+  "industry": "project-management",
+  "level": "mid",
+  "avg_salary": 115000,
+  "description": "Facilitates Scrum ceremonies, removes impediments for agile development teams, coaches on Scrum values and practices, and shields the team from outside distractions to maximize sprint delivery.",
+  "suggested_certs": ["capm", "csm", "pmi-acp"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster"]
+}

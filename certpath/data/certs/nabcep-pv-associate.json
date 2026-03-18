@@ -1,0 +1,20 @@
+{
+  "id": "nabcep-pv-associate",
+  "name": "NABCEP PV Associate",
+  "issuer": "North American Board of Certified Energy Practitioners (NABCEP)",
+  "cost": 150,
+  "difficulty": "beginner",
+  "duration_weeks": 6,
+  "description": "Entry-level solar PV credential validating foundational knowledge of photovoltaic systems, electrical theory, safety, and basic installation practices. Typically taken as part of an approved training course. Serves as a stepping stone toward the full PVIP credential.",
+  "prerequisites": [],
+  "leads_to": ["nabcep-pvip"],
+  "useful_for_occupations": ["solar-installer"],
+  "industry": "electrical",
+  "exam_details": {
+    "questions": 70,
+    "passing_score": 65,
+    "time_minutes": 120
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.nabcep.org/certifications/associate-program/"]
+}

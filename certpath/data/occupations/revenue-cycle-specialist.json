@@ -1,0 +1,11 @@
+{
+  "id": "revenue-cycle-specialist",
+  "title": "Revenue Cycle Specialist",
+  "industry": "healthcare",
+  "level": "mid",
+  "avg_salary": 68000,
+  "description": "Manages the full financial lifecycle of patient services — from registration and coding through billing, collections, and denial management — to maximize reimbursement for healthcare providers.",
+  "suggested_certs": ["cbcs", "cpc", "cpb"],
+  "last_updated": "2026-01",
+  "sources": ["https://www.aapc.com/certifications/cpb"]
+}

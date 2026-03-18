@@ -1,0 +1,20 @@
+{
+  "id": "ccnp-enterprise",
+  "name": "Cisco Certified Network Professional Enterprise (CCNP Enterprise)",
+  "issuer": "Cisco",
+  "cost": 400,
+  "difficulty": "advanced",
+  "duration_weeks": 18,
+  "description": "Professional-level Cisco networking certification for enterprise infrastructure design, implementation, and troubleshooting. Requires one core exam and one concentration exam.",
+  "prerequisites": ["ccna"],
+  "leads_to": [],
+  "useful_for_occupations": ["network-engineer"],
+  "industry": "networking",
+  "exam_details": {
+    "questions": 90,
+    "passing_score": 750,
+    "time_minutes": 120
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/professional/ccnp-enterprise.html"]
+}

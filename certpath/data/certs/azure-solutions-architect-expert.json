@@ -1,0 +1,20 @@
+{
+  "id": "azure-solutions-architect-expert",
+  "name": "Microsoft Certified: Azure Solutions Architect Expert (AZ-305)",
+  "issuer": "Microsoft",
+  "cost": 165,
+  "difficulty": "advanced",
+  "duration_weeks": 14,
+  "description": "Expert-level certification for designing and implementing Azure infrastructure, data, applications, and security solutions at enterprise scale.",
+  "prerequisites": ["azure-administrator-associate"],
+  "leads_to": [],
+  "useful_for_occupations": ["cloud-architect", "solutions-architect"],
+  "industry": "cloud-computing",
+  "exam_details": {
+    "questions": 60,
+    "passing_score": 700,
+    "time_minutes": 110
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://learn.microsoft.com/en-us/certifications/azure-solutions-architect/"]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "cpb",
+  "name": "Certified Professional Biller (CPB)",
+  "issuer": "AAPC",
+  "cost": 260,
+  "difficulty": "intermediate",
+  "duration_weeks": 12,
+  "description": "AAPC's dedicated billing credential covering insurance billing, collections, accounts receivable, payer contracts, and compliance. Pairs naturally with the CPC for full revenue cycle competency.",
+  "prerequisites": ["cpc"],
+  "leads_to": ["rhia"],
+  "useful_for_occupations": ["medical-biller", "revenue-cycle-specialist"],
+  "industry": "healthcare",
+  "exam_details": {
+    "questions": 135,
+    "passing_score": 70,
+    "time_minutes": 340
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.aapc.com/certifications/cpb"]
+}

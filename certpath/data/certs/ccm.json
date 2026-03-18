@@ -1,0 +1,20 @@
+{
+  "id": "ccm",
+  "name": "Certified Construction Manager (CCM)",
+  "issuer": "Construction Management Association of America (CMAA)",
+  "cost": 575,
+  "difficulty": "advanced",
+  "duration_weeks": 16,
+  "description": "The premier credential for construction management professionals. Covers all 10 CM practice areas including cost, time, quality, safety, and sustainability management. Requires significant AEC experience and professional references.",
+  "prerequisites": ["osha-30-construction"],
+  "leads_to": [],
+  "useful_for_occupations": ["construction-manager", "site-superintendent"],
+  "industry": "construction",
+  "exam_details": {
+    "questions": 160,
+    "passing_score": 70,
+    "time_minutes": 240
+  },
+  "last_updated": "2026-01",
+  "sources": ["https://www.cmaanet.org/certification/ccm"]
+}
