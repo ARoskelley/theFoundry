@@ -1,19 +1,20 @@
-import { getCert } from './getCert'
-
 /**
  * Takes an array of cert IDs from an occupation and builds
  * React Flow nodes + edges to render the roadmap flowchart.
  *
  * Each cert becomes a node. prerequisite relationships become edges.
  * Nodes are laid out in columns by their "depth" in the chain.
+ *
+ * @param {string[]} certIds - The occupation's suggested cert IDs
+ * @param {Object} certLookup - Map of cert id → cert object (pre-loaded by the caller)
  */
-export function buildRoadmapNodes(certIds) {
+export function buildRoadmapNodes(certIds, certLookup) {
   const certMap = new Map()
 
   function collectCert(id) {
     if (!id || certMap.has(id)) return
 
-    const cert = getCert(id)
+    const cert = certLookup[id]
     if (!cert) return
 
     certMap.set(id, cert)
@@ -42,7 +43,7 @@ export function buildRoadmapNodes(certIds) {
     }
 
     const prereqDepths = cert.prerequisites.map(pid => {
-      const prereqCert = getCert(pid)
+      const prereqCert = certLookup[pid]
       return prereqCert ? getDepth(prereqCert) + 1 : 0
     })
 

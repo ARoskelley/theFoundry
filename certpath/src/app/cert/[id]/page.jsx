@@ -13,17 +13,17 @@ const difficultyColors = {
   advanced: '#ef4444',
 }
 
-export function generateStaticParams() {
-  return getAllCertIds().map(id => ({ id }))
+export async function generateStaticParams() {
+  return (await getAllCertIds()).map(id => ({ id }))
 }
 
 export default async function CertPage({ params }) {
   const { id } = await params
-  const cert = getCert(id)
+  const cert = await getCert(id)
 
   if (!cert) return notFound()
 
-  const relatedOccupations = getOccupationsByIds(cert.useful_for_occupations)
+  const relatedOccupations = await getOccupationsByIds(cert.useful_for_occupations)
   const relatedOccupationIds = new Set(relatedOccupations.map(occupation => occupation.id))
   const unresolvedOccupationIds = (cert.useful_for_occupations || []).filter(
     occupationId => !relatedOccupationIds.has(occupationId)

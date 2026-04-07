@@ -2,9 +2,9 @@ import CertDirectory from '@/components/cert/CertDirectory'
 import { getAllCerts } from '@/lib/getCert'
 import { getAllIndustries } from '@/lib/getOccupation'
 
-export default function CertsPage() {
-  const certs = getAllCerts().sort((a, b) => a.name.localeCompare(b.name))
-  const industries = getAllIndustries()
+export default async function CertsPage() {
+  const certs = (await getAllCerts()).sort((a, b) => a.name.localeCompare(b.name))
+  const industries = await getAllIndustries()
 
   return (
     <div style={{ padding: '60px 40px', maxWidth: '1200px', margin: '0 auto' }}>

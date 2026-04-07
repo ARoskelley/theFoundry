@@ -3,10 +3,10 @@ import { getAllCertIds } from '@/lib/getCert'
 import IndustryCard from '@/components/industry/IndustryCard'
 import Link from 'next/link'
 
-export default function Home() {
-  const industries = getAllIndustries()
-  const certCount = getAllCertIds().length
-  const occupationCount = getAllOccupationIds().length
+export default async function Home() {
+  const industries = await getAllIndustries()
+  const certCount = (await getAllCertIds()).length
+  const occupationCount = (await getAllOccupationIds()).length
 
   return (
     <div>

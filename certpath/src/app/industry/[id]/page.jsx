@@ -2,13 +2,13 @@ import { getAllIndustries, getOccupationsByIndustry } from '@/lib/getOccupation'
 import OccupationCard from '@/components/occupation/OccupationCard'
 import { notFound } from 'next/navigation'
 
-export function generateStaticParams() {
-  return getAllIndustries().map(id => ({ id }))
+export async function generateStaticParams() {
+  return (await getAllIndustries()).map(id => ({ id }))
 }
 
 export default async function IndustryPage({ params }) {
   const { id } = await params
-  const occupations = getOccupationsByIndustry(id)
+  const occupations = await getOccupationsByIndustry(id)
 
   if (!occupations.length) return notFound()
 

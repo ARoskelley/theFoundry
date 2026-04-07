@@ -6,9 +6,9 @@ export const metadata = {
   description: 'Browse all roles and career paths across every industry.',
 }
 
-export default function OccupationsPage() {
-  const occupations = getAllOccupations()
-  const industries = getAllIndustries()
+export default async function OccupationsPage() {
+  const occupations = await getAllOccupations()
+  const industries = await getAllIndustries()
 
   return (
     <div style={{ padding: '60px 40px', maxWidth: '1200px', margin: '0 auto' }}>

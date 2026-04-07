@@ -1,20 +1,22 @@
 import { getAllOccupationIds, getOccupation } from '@/lib/getOccupation'
+import { getAllCerts } from '@/lib/getCert'
 import { buildRoadmapNodes } from '@/lib/buildRoadmapNodes'
 import RoadmapFlow from '@/components/roadmap/RoadmapFlow'
 import RoadmapProgress from '@/components/progress/RoadmapProgress'
 import { notFound } from 'next/navigation'
 
-export function generateStaticParams() {
-  return getAllOccupationIds().map(id => ({ id }))
+export async function generateStaticParams() {
+  return (await getAllOccupationIds()).map(id => ({ id }))
 }
 
 export default async function OccupationPage({ params }) {
   const { id } = await params
-  const occupation = getOccupation(id)
+  const [occupation, allCerts] = await Promise.all([getOccupation(id), getAllCerts()])
 
   if (!occupation) return notFound()
 
-  const { nodes, edges } = buildRoadmapNodes(occupation.suggested_certs)
+  const certLookup = Object.fromEntries(allCerts.map(c => [c.id, c]))
+  const { nodes, edges } = buildRoadmapNodes(occupation.suggested_certs, certLookup)
   const roadmapCertIds = nodes.map(node => node.id)
 
   const totalCost = nodes.reduce((sum, n) => sum + (n.data.cert?.cost || 0), 0)

@@ -1,24 +1,44 @@
-import fs from 'fs'
-import path from 'path'
+import { supabase } from './supabase'
 
-const certsDir = path.join(process.cwd(), 'data', 'certs')
+export async function getCert(id) {
+  const { data, error } = await supabase
+    .from('certs')
+    .select('*')
+    .eq('id', id)
+    .single()
 
-export function getCert(id) {
-  try {
-    const filePath = path.join(certsDir, `${id}.json`)
-    const raw = fs.readFileSync(filePath, 'utf-8')
-    return JSON.parse(raw)
-  } catch {
-    return null
-  }
+  if (error) return null
+  return data
 }
 
-export function getAllCertIds() {
-  const index = JSON.parse(fs.readFileSync(path.join(certsDir, 'index.json'), 'utf-8'))
-  return index.certs
+export async function getAllCertIds() {
+  const { data, error } = await supabase
+    .from('certs')
+    .select('id')
+    .order('id')
+
+  if (error) return []
+  return data.map(row => row.id)
 }
 
-export function getAllCerts() {
-  const ids = getAllCertIds()
-  return ids.map(id => getCert(id)).filter(Boolean)
+export async function getAllCerts() {
+  const { data, error } = await supabase
+    .from('certs')
+    .select('*')
+    .order('name')
+
+  if (error) return []
+  return data
+}
+
+export async function getCertsByIds(ids) {
+  if (!ids || ids.length === 0) return []
+
+  const { data, error } = await supabase
+    .from('certs')
+    .select('*')
+    .in('id', ids)
+
+  if (error) return []
+  return data
 }

@@ -1,38 +1,63 @@
-import fs from 'fs'
-import path from 'path'
+import { supabase } from './supabase'
 
-const occupationsDir = path.join(process.cwd(), 'data', 'occupations')
+export async function getOccupation(id) {
+  const { data, error } = await supabase
+    .from('occupations')
+    .select('*')
+    .eq('id', id)
+    .single()
 
-export function getOccupation(id) {
-  try {
-    const filePath = path.join(occupationsDir, `${id}.json`)
-    const raw = fs.readFileSync(filePath, 'utf-8')
-    return JSON.parse(raw)
-  } catch {
-    return null
-  }
+  if (error) return null
+  return data
 }
 
-export function getAllOccupationIds() {
-  const index = JSON.parse(fs.readFileSync(path.join(occupationsDir, 'index.json'), 'utf-8'))
-  return index.occupations
+export async function getAllOccupationIds() {
+  const { data, error } = await supabase
+    .from('occupations')
+    .select('id')
+    .order('id')
+
+  if (error) return []
+  return data.map(row => row.id)
 }
 
-export function getAllOccupations() {
-  return getAllOccupationIds().map(id => getOccupation(id)).filter(Boolean)
+export async function getAllOccupations() {
+  const { data, error } = await supabase
+    .from('occupations')
+    .select('*')
+    .order('title')
+
+  if (error) return []
+  return data
 }
 
-export function getOccupationsByIndustry(industry) {
-  const index = JSON.parse(fs.readFileSync(path.join(occupationsDir, 'index.json'), 'utf-8'))
-  const ids = index.industries[industry] || []
-  return ids.map(id => getOccupation(id)).filter(Boolean)
+export async function getOccupationsByIndustry(industry) {
+  const { data, error } = await supabase
+    .from('occupations')
+    .select('*')
+    .eq('industry', industry)
+
+  if (error) return []
+  return data
 }
 
-export function getOccupationsByIds(ids) {
-  return (ids || []).map(id => getOccupation(id)).filter(Boolean)
+export async function getOccupationsByIds(ids) {
+  if (!ids || ids.length === 0) return []
+
+  const { data, error } = await supabase
+    .from('occupations')
+    .select('*')
+    .in('id', ids)
+
+  if (error) return []
+  return data
 }
 
-export function getAllIndustries() {
-  const index = JSON.parse(fs.readFileSync(path.join(occupationsDir, 'index.json'), 'utf-8'))
-  return Object.keys(index.industries)
+export async function getAllIndustries() {
+  const { data, error } = await supabase
+    .from('occupations')
+    .select('industry')
+
+  if (error) return []
+  return [...new Set(data.map(row => row.industry))].sort()
 }

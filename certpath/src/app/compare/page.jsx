@@ -8,9 +8,9 @@ export const metadata = {
 
 export default async function ComparePage({ searchParams }) {
   const { a, b } = await searchParams
-  const certA = a ? getCert(a) : null
-  const certB = b ? getCert(b) : null
-  const allCerts = getAllCerts()
+  const certA = a ? await getCert(a) : null
+  const certB = b ? await getCert(b) : null
+  const allCerts = await getAllCerts()
 
   return (
     <div style={{ padding: '60px 40px', maxWidth: '1000px', margin: '0 auto' }}>
