@@ -75,18 +75,7 @@ export default function Home() {
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
               href="#industries"
-              style={{
-                padding: '13px 28px',
-                borderRadius: '10px',
-                background: 'var(--accent)',
-                color: '#fff',
-                fontWeight: '700',
-                fontSize: '0.95rem',
-                textDecoration: 'none',
-                transition: 'opacity 0.15s',
-              }}
-              onMouseEnter={e => e.currentTarget.style.opacity = '0.88'}
-              onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+              className="hero-cta-primary"
             >
               Explore Industries →
             </a>

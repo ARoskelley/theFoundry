@@ -4,6 +4,20 @@
   padding: 0;
 }
 
+.hero-cta-primary {
+  padding: 13px 28px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.hero-cta-primary:hover {
+  opacity: 0.88;
+}
+
 :root {
   --bg: #0f0f13;
   --surface: #1a1a24;
