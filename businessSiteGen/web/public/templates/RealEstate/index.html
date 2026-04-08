@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="{{LANG}}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{SEO_META}}
+    {{THEME_VARS}}
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="template-realestate{{ANIMATIONS_CLASS}}">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-name">{{SITE_NAME}}</div>
+        <div class="brand-tagline">{{TAGLINE}}</div>
+      </div>
+      <nav class="nav">
+        <a href="#listings">Listings</a>
+        <a href="#agents">Agents</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero-shell">
+        {{HERO_SECTION}}
+      </div>
+
+      {{ABOUT_SECTION}}
+      {{REALESTATE_LISTINGS}}
+      {{REALESTATE_NEIGHBORHOODS}}
+      {{REALESTATE_AGENTS}}
+      {{SERVICES_SECTION}}
+      {{TESTIMONIALS_SECTION}}
+      {{CTA_SECTION}}
+      {{CONTACT_SECTION}}
+      {{LOCATIONS_SECTION}}
+    </main>
+
+    <footer class="site-footer">
+      {{SOCIAL_SECTION}}
+      <p>&copy; {{YEAR}} {{SITE_NAME}}. All rights reserved.</p>
+    </footer>
+
+    {{ANIMATIONS_SCRIPT}}
+    <script src="theme.js" defer></script>
+  </body>
+</html>
